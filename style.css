@@ -1,0 +1,300 @@
+/* Essential styles not available in Tailwind */
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lexend', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom fadeIn animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Fix for 360° hover rotation */
+.hover\:rotate-360:hover {
+  transform: rotate(360deg);
+}
+
+/* Mobile responsive fix */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem !important;
+  }
+  
+  h2 {
+    font-size: 1.8rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem !important;
+  }
+  
+  h2 {
+    font-size: 1.5rem !important;
+  }
+}
+
+/* Horizontal scroll carousel styles */
+#carouselTrack {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Showcase image containers */
+.showcase-image {
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+/* Subtle hover effect on showcase images */
+.showcase-image img {
+  will-change: transform;
+  transition: transform 0.2s ease;
+}
+
+.showcase-image:hover img {
+  transform: scale(1.05);
+}
+
+/* Navigation buttons with glassmorphism effect */
+#prevBtn, #nextBtn, #prevBtnMobile, #nextBtnMobile {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#prevBtn:hover, #nextBtn:hover, #prevBtnMobile:hover, #nextBtnMobile:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Specific style for desktop external buttons */
+#prevBtn, #nextBtn {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* Button animation on hover */
+#prevBtn:hover, #nextBtn:hover {
+  transform: translateY(-50%) scale(1.15);
+}
+
+#prevBtnMobile:hover, #nextBtnMobile:hover {
+  transform: scale(1.1);
+}
+
+/* Navigation button animations */
+#prevBtn, #nextBtn {
+  transition: all 0.2s ease;
+}
+
+#prevBtn:disabled, #nextBtn:disabled {
+  cursor: not-allowed;
+}
+
+/* Carousel drag styles */
+#carouselTrack {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+#carouselTrack img {
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Progress indicator styles */
+#progressDots {
+  min-height: 8px;
+}
+
+#progressText {
+  font-variant-numeric: tabular-nums;
+  min-width: 3rem;
+}
+
+/* Horizontal scroll responsive design */
+@media (max-width: 1024px) {
+  /* Adjust arrow position on tablet */
+  #prevBtn {
+    left: -2rem;
+  }
+  
+  #nextBtn {
+    right: -2rem;
+  }
+}
+
+/* Mobile carousel improvements */
+@media (max-width: 768px) {
+  /* Reduce carousel track padding on mobile */
+  #carouselTrack {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  
+  /* Ensure mobile buttons are properly spaced */
+  #prevBtnMobile, #nextBtnMobile {
+    min-width: 48px;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Further reduce spacing on small screens */
+  #carouselTrack {
+    gap: 0.75rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Minimal spacing for very small screens */
+  #carouselTrack {
+    gap: 0.5rem !important;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+  
+  /* Smaller mobile buttons for very small screens */
+  #prevBtnMobile, #nextBtnMobile {
+    padding: 0.625rem;
+  }
+  
+  #prevBtnMobile svg, #nextBtnMobile svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Full screen image modal */
+#imageModal {
+  z-index: 9999;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+#imageModal.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#modalImage {
+  max-width: 90vw;
+  max-height: 90vh;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+  animation: modalImageAppear 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes modalImageAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+#closeModal {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 0.5rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.2s ease;
+}
+
+#closeModal:hover {
+  background: rgba(0, 0, 0, 0.7);
+  transform: scale(1.1);
+}
+
+/* Expand icon on showcase images */
+.showcase-image .bg-white\/20 {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Modal responsive design */
+@media (max-width: 768px) {
+  #modalImage {
+    max-width: 95vw;
+    max-height: 80vh;
+  }
+  
+  #closeModal {
+    top: -3rem;
+    right: 0;
+  }
+  
+  #closeModal svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  #modalImage {
+    max-width: 98vw;
+    max-height: 75vh;
+  }
+  
+  #closeModal {
+    top: -2.5rem;
+    padding: 0.375rem;
+  }
+  
+  #closeModal svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Accessibility - reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  #carouselTrack {
+    transition: none !important;
+  }
+  
+  .showcase-image img {
+    transition: none !important;
+  }
+  
+  #modalImage {
+    animation: none !important;
+  }
+}
