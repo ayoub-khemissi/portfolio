@@ -350,421 +350,345 @@
         </a>
     </section>
     <section id="showcase"
-        class="flex flex-col justify-center items-center bg-gradient-to-br from-slate-900 via-blue-950 to-purple-950 text-white px-4 lg:px-8 min-h-screen">
-        <div class="flex flex-col justify-center items-center space-y-12 w-full max-w-7xl py-16 lg:py-24">
+        class="flex flex-col justify-center items-center bg-gradient-to-br from-slate-900 via-blue-950 to-purple-950 text-white px-4 lg:px-8 py-16 lg:py-24">
+        <div class="flex flex-col justify-center items-center space-y-16 w-full max-w-7xl">
             <h1
                 class="py-1 uppercase text-4xl lg:text-6xl font-bold text-center bg-gradient-to-r from-yellow-200 to-pink-200 bg-clip-text text-transparent drop-shadow-lg">
                 Mes créations</h1>
 
-            <div class="relative w-full flex items-center justify-center">
-                <button id="prevBtn" aria-label="Image précédente" role="button" tabindex="0"
-                    class="hidden lg:flex absolute left-0 xl:-left-16 top-1/2 transform -translate-y-1/2 z-10 bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white rounded-full p-5 transition-all duration-300 hover:scale-110 shadow-2xl">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg>
-                </button>
-
-                <div class="w-full max-w-6xl mx-auto">
-                    <div class="flex justify-between items-center mb-4 lg:hidden px-4">
-                        <button id="prevBtnMobile"
-                            class="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white rounded-full p-3 transition-all duration-300 hover:scale-110 shadow-lg">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2.5"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </button>
-                        <button id="nextBtnMobile"
-                            class="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white rounded-full p-3 transition-all duration-300 hover:scale-110 shadow-lg">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2.5"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="overflow-hidden rounded-2xl">
-                        <div id="carouselTrack"
-                            class="flex gap-3 sm:gap-4 lg:gap-6 transition-transform duration-500 ease-in-out px-2 sm:px-4 cursor-grab active:cursor-grabbing"
-                            style="touch-action: pan-x;">
-
-                            <div class="flex-shrink-0 w-64 sm:w-72 lg:w-80">
-                                <div
-                                    class="bg-gradient-to-r from-yellow-300/20 to-orange-300/20 backdrop-blur-sm rounded-2xl p-3 mb-4">
-                                    <h4 class="text-lg font-bold text-center text-yellow-300">Billy Quiz</h4>
-                                </div>
-                                <div class="relative group overflow-hidden rounded-2xl shadow-2xl cursor-pointer showcase-image"
-                                    data-src="img/showcase/billy-quiz-1.png" data-alt="Billy Quiz - Screen 1">
-                                    <img src="img/showcase/billy-quiz-1.png" alt="Billy Quiz - Screen 1"
-                                        class="w-full h-64 sm:h-80 lg:h-96 object-cover transition-transform duration-300 group-hover:scale-105">
-                                    <div
-                                        class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <!-- Project 1: Bani Street -->
+            <article class="w-full bg-white/5 backdrop-blur-sm rounded-3xl overflow-hidden border border-white/10 hover:border-amber-400/30 transition-all duration-500">
+                <div class="flex flex-col lg:flex-row">
+                    <!-- Project Images -->
+                    <div class="lg:w-3/5 relative">
+                        <div class="project-gallery" data-project="bani-street">
+                            <div class="relative overflow-hidden">
+                                <div class="gallery-track flex transition-transform duration-500 ease-out">
+                                    <div class="gallery-slide flex-shrink-0 w-full">
+                                        <div class="relative group cursor-pointer showcase-image" data-src="img/showcase/bani-street/home.png" data-alt="Bani Street - Page d'accueil">
+                                            <img src="img/showcase/bani-street/home.png" alt="Bani Street - Page d'accueil"
+                                                class="w-full aspect-video object-cover transition-transform duration-300 group-hover:scale-105">
+                                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+                                                <span class="text-white text-sm font-medium bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">Cliquer pour agrandir</span>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div
-                                        class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                        <div class="bg-white/20 backdrop-blur-sm rounded-full p-3">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg" class="text-white">
-                                                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="currentColor"
-                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
+                                    <div class="gallery-slide flex-shrink-0 w-full">
+                                        <div class="relative group cursor-pointer showcase-image" data-src="img/showcase/bani-street/orphelins.png" data-alt="Bani Street - Campagne orphelins">
+                                            <img src="img/showcase/bani-street/orphelins.png" alt="Bani Street - Campagne orphelins"
+                                                class="w-full aspect-video object-cover transition-transform duration-300 group-hover:scale-105">
+                                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+                                                <span class="text-white text-sm font-medium bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">Cliquer pour agrandir</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-slide flex-shrink-0 w-full">
+                                        <div class="relative group cursor-pointer showcase-image" data-src="img/showcase/bani-street/ensemble.png" data-alt="Bani Street - Vue d'ensemble">
+                                            <img src="img/showcase/bani-street/ensemble.png" alt="Bani Street - Vue d'ensemble"
+                                                class="w-full aspect-video object-cover transition-transform duration-300 group-hover:scale-105">
+                                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+                                                <span class="text-white text-sm font-medium bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">Cliquer pour agrandir</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="flex-shrink-0 w-64 sm:w-72 lg:w-80">
-                                <div
-                                    class="bg-gradient-to-r from-yellow-300/20 to-orange-300/20 backdrop-blur-sm rounded-2xl p-3 mb-4">
-                                    <h4 class="text-lg font-bold text-center text-yellow-300">Billy Quiz</h4>
-                                </div>
-                                <div class="relative group overflow-hidden rounded-2xl shadow-2xl cursor-pointer showcase-image"
-                                    data-src="img/showcase/billy-quiz-2.png" data-alt="Billy Quiz - Screen 2">
-                                    <img src="img/showcase/billy-quiz-2.png" alt="Billy Quiz - Screen 2"
-                                        class="w-full h-64 sm:h-80 lg:h-96 object-cover transition-transform duration-300 group-hover:scale-105">
-                                    <div
-                                        class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    </div>
-                                    <div
-                                        class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                        <div class="bg-white/20 backdrop-blur-sm rounded-full p-3">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg" class="text-white">
-                                                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="currentColor"
-                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
-                                        </div>
-                                    </div>
+                                <!-- Gallery Navigation -->
+                                <button class="gallery-prev absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-3 transition-all duration-300 hover:scale-110 z-10">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                                <button class="gallery-next absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-3 transition-all duration-300 hover:scale-110 z-10">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                                <!-- Gallery Dots -->
+                                <div class="gallery-dots absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+                                    <button class="w-2 h-2 rounded-full bg-white transition-all duration-300"></button>
+                                    <button class="w-2 h-2 rounded-full bg-white/40 hover:bg-white/60 transition-all duration-300"></button>
+                                    <button class="w-2 h-2 rounded-full bg-white/40 hover:bg-white/60 transition-all duration-300"></button>
                                 </div>
                             </div>
-
-                            <div class="flex-shrink-0 w-64 sm:w-72 lg:w-80">
-                                <div
-                                    class="bg-gradient-to-r from-yellow-300/20 to-orange-300/20 backdrop-blur-sm rounded-2xl p-3 mb-4">
-                                    <h4 class="text-lg font-bold text-center text-yellow-300">Billy Quiz</h4>
-                                </div>
-                                <div class="relative group overflow-hidden rounded-2xl shadow-2xl cursor-pointer showcase-image"
-                                    data-src="img/showcase/billy-quiz-3.png" data-alt="Billy Quiz - Screen 3">
-                                    <img src="img/showcase/billy-quiz-3.png" alt="Billy Quiz - Screen 3"
-                                        class="w-full h-64 sm:h-80 lg:h-96 object-cover transition-transform duration-300 group-hover:scale-105">
-                                    <div
-                                        class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    </div>
-                                    <div
-                                        class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                        <div class="bg-white/20 backdrop-blur-sm rounded-full p-3">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg" class="text-white">
-                                                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="currentColor"
-                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Nabawi Images -->
-                            <div class="flex-shrink-0 w-64 sm:w-72 lg:w-80">
-                                <div
-                                    class="bg-gradient-to-r from-green-300/20 to-emerald-300/20 backdrop-blur-sm rounded-2xl p-3 mb-4">
-                                    <h4 class="text-lg font-bold text-center text-green-300">Nabawi</h4>
-                                </div>
-                                <div class="relative group overflow-hidden rounded-2xl shadow-2xl cursor-pointer showcase-image"
-                                    data-src="img/showcase/nabawi-1.png" data-alt="Nabawi - Screen 1">
-                                    <img src="img/showcase/nabawi-1.png" alt="Nabawi - Screen 1"
-                                        class="w-full h-64 sm:h-80 lg:h-96 object-cover transition-transform duration-300 group-hover:scale-105">
-                                    <div
-                                        class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    </div>
-                                    <div
-                                        class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                        <div class="bg-white/20 backdrop-blur-sm rounded-full p-3">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg" class="text-white">
-                                                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="currentColor"
-                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="flex-shrink-0 w-64 sm:w-72 lg:w-80">
-                                <div
-                                    class="bg-gradient-to-r from-green-300/20 to-emerald-300/20 backdrop-blur-sm rounded-2xl p-3 mb-4">
-                                    <h4 class="text-lg font-bold text-center text-green-300">Nabawi</h4>
-                                </div>
-                                <div class="relative group overflow-hidden rounded-2xl shadow-2xl cursor-pointer showcase-image"
-                                    data-src="img/showcase/nabawi-2.png" data-alt="Nabawi - Screen 2">
-                                    <img src="img/showcase/nabawi-2.png" alt="Nabawi - Screen 2"
-                                        class="w-full h-64 sm:h-80 lg:h-96 object-cover transition-transform duration-300 group-hover:scale-105">
-                                    <div
-                                        class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    </div>
-                                    <div
-                                        class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                        <div class="bg-white/20 backdrop-blur-sm rounded-full p-3">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg" class="text-white">
-                                                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="currentColor"
-                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="flex-shrink-0 w-64 sm:w-72 lg:w-80">
-                                <div
-                                    class="bg-gradient-to-r from-green-300/20 to-emerald-300/20 backdrop-blur-sm rounded-2xl p-3 mb-4">
-                                    <h4 class="text-lg font-bold text-center text-green-300">Nabawi</h4>
-                                </div>
-                                <div class="relative group overflow-hidden rounded-2xl shadow-2xl cursor-pointer showcase-image"
-                                    data-src="img/showcase/nabawi-3.png" data-alt="Nabawi - Screen 3">
-                                    <img src="img/showcase/nabawi-3.png" alt="Nabawi - Screen 3"
-                                        class="w-full h-64 sm:h-80 lg:h-96 object-cover transition-transform duration-300 group-hover:scale-105">
-                                    <div
-                                        class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    </div>
-                                    <div
-                                        class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                        <div class="bg-white/20 backdrop-blur-sm rounded-full p-3">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg" class="text-white">
-                                                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="currentColor"
-                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="flex-shrink-0 w-64 sm:w-72 lg:w-80">
-                                <div
-                                    class="bg-gradient-to-r from-green-300/20 to-emerald-300/20 backdrop-blur-sm rounded-2xl p-3 mb-4">
-                                    <h4 class="text-lg font-bold text-center text-green-300">Nabawi</h4>
-                                </div>
-                                <div class="relative group overflow-hidden rounded-2xl shadow-2xl cursor-pointer showcase-image"
-                                    data-src="img/showcase/nabawi-4.png" data-alt="Nabawi - Screen 4">
-                                    <img src="img/showcase/nabawi-4.png" alt="Nabawi - Screen 4"
-                                        class="w-full h-64 sm:h-80 lg:h-96 object-cover transition-transform duration-300 group-hover:scale-105">
-                                    <div
-                                        class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    </div>
-                                    <div
-                                        class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                        <div class="bg-white/20 backdrop-blur-sm rounded-full p-3">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg" class="text-white">
-                                                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="currentColor"
-                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- ShopTracker Images -->
-                            <div class="flex-shrink-0 w-64 sm:w-72 lg:w-80">
-                                <div
-                                    class="bg-gradient-to-r from-purple-300/20 to-pink-300/20 backdrop-blur-sm rounded-2xl p-3 mb-4">
-                                    <h4 class="text-lg font-bold text-center text-purple-300">ShopTracker</h4>
-                                </div>
-                                <div class="relative group overflow-hidden rounded-2xl shadow-2xl cursor-pointer showcase-image"
-                                    data-src="img/showcase/shoptracker-2.png" data-alt="ShopTracker - Screen 2">
-                                    <img src="img/showcase/shoptracker-2.png" alt="ShopTracker - Screen 2"
-                                        class="w-full h-64 sm:h-80 lg:h-96 object-cover transition-transform duration-300 group-hover:scale-105">
-                                    <div
-                                        class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    </div>
-                                    <div
-                                        class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                        <div class="bg-white/20 backdrop-blur-sm rounded-full p-3">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg" class="text-white">
-                                                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="currentColor"
-                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="flex-shrink-0 w-64 sm:w-72 lg:w-80">
-                                <div
-                                    class="bg-gradient-to-r from-purple-300/20 to-pink-300/20 backdrop-blur-sm rounded-2xl p-3 mb-4">
-                                    <h4 class="text-lg font-bold text-center text-purple-300">ShopTracker</h4>
-                                </div>
-                                <div class="relative group overflow-hidden rounded-2xl shadow-2xl cursor-pointer showcase-image"
-                                    data-src="img/showcase/shoptracker-3.png" data-alt="ShopTracker - Screen 3">
-                                    <img src="img/showcase/shoptracker-3.png" alt="ShopTracker - Screen 3"
-                                        class="w-full h-64 sm:h-80 lg:h-96 object-cover transition-transform duration-300 group-hover:scale-105">
-                                    <div
-                                        class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    </div>
-                                    <div
-                                        class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                        <div class="bg-white/20 backdrop-blur-sm rounded-full p-3">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg" class="text-white">
-                                                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="currentColor"
-                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="flex-shrink-0 w-64 sm:w-72 lg:w-80">
-                                <div
-                                    class="bg-gradient-to-r from-purple-300/20 to-pink-300/20 backdrop-blur-sm rounded-2xl p-3 mb-4">
-                                    <h4 class="text-lg font-bold text-center text-purple-300">ShopTracker</h4>
-                                </div>
-                                <div class="relative group overflow-hidden rounded-2xl shadow-2xl cursor-pointer showcase-image"
-                                    data-src="img/showcase/shoptracker-4.png" data-alt="ShopTracker - Screen 4">
-                                    <img src="img/showcase/shoptracker-4.png" alt="ShopTracker - Screen 4"
-                                        class="w-full h-64 sm:h-80 lg:h-96 object-cover transition-transform duration-300 group-hover:scale-105">
-                                    <div
-                                        class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    </div>
-                                    <div
-                                        class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                        <div class="bg-white/20 backdrop-blur-sm rounded-full p-3">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg" class="text-white">
-                                                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="currentColor"
-                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="flex-shrink-0 w-64 sm:w-72 lg:w-80">
-                                <div
-                                    class="bg-gradient-to-r from-purple-300/20 to-pink-300/20 backdrop-blur-sm rounded-2xl p-3 mb-4">
-                                    <h4 class="text-lg font-bold text-center text-purple-300">ShopTracker</h4>
-                                </div>
-                                <div class="relative group overflow-hidden rounded-2xl shadow-2xl cursor-pointer showcase-image"
-                                    data-src="img/showcase/shoptracker-1.png" data-alt="ShopTracker - Screen 1">
-                                    <img src="img/showcase/shoptracker-1.png" alt="ShopTracker - Screen 1"
-                                        class="w-full h-64 sm:h-80 lg:h-96 object-cover transition-transform duration-300 group-hover:scale-105">
-                                    <div
-                                        class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    </div>
-                                    <div
-                                        class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                        <div class="bg-white/20 backdrop-blur-sm rounded-full p-3">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg" class="text-white">
-                                                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="currentColor"
-                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Numeratech Images -->
-                            <div class="flex-shrink-0 w-64 sm:w-72 lg:w-80">
-                                <div
-                                    class="bg-gradient-to-r from-blue-300/20 to-cyan-300/20 backdrop-blur-sm rounded-2xl p-3 mb-4">
-                                    <h4 class="text-lg font-bold text-center text-blue-300">Numeratech</h4>
-                                </div>
-                                <div class="relative group overflow-hidden rounded-2xl shadow-2xl cursor-pointer showcase-image"
-                                    data-src="img/showcase/numeratech-1.png" data-alt="Numeratech - Screen 1">
-                                    <img src="img/showcase/numeratech-1.png" alt="Numeratech - Screen 1"
-                                        class="w-full h-64 sm:h-80 lg:h-96 object-cover transition-transform duration-300 group-hover:scale-105">
-                                    <div
-                                        class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    </div>
-                                    <div
-                                        class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                        <div class="bg-white/20 backdrop-blur-sm rounded-full p-3">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg" class="text-white">
-                                                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="currentColor"
-                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="flex-shrink-0 w-64 sm:w-72 lg:w-80">
-                                <div
-                                    class="bg-gradient-to-r from-blue-300/20 to-cyan-300/20 backdrop-blur-sm rounded-2xl p-3 mb-4">
-                                    <h4 class="text-lg font-bold text-center text-blue-300">Numeratech</h4>
-                                </div>
-                                <div class="relative group overflow-hidden rounded-2xl shadow-2xl cursor-pointer showcase-image"
-                                    data-src="img/showcase/numeratech-2.png" data-alt="Numeratech - Screen 2">
-                                    <img src="img/showcase/numeratech-2.png" alt="Numeratech - Screen 2"
-                                        class="w-full h-64 sm:h-80 lg:h-96 object-cover transition-transform duration-300 group-hover:scale-105">
-                                    <div
-                                        class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    </div>
-                                    <div
-                                        class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                        <div class="bg-white/20 backdrop-blur-sm rounded-full p-3">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg" class="text-white">
-                                                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="currentColor"
-                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="flex-shrink-0 w-64 sm:w-72 lg:w-80">
-                                <div
-                                    class="bg-gradient-to-r from-blue-300/20 to-cyan-300/20 backdrop-blur-sm rounded-2xl p-3 mb-4">
-                                    <h4 class="text-lg font-bold text-center text-blue-300">Numeratech</h4>
-                                </div>
-                                <div class="relative group overflow-hidden rounded-2xl shadow-2xl cursor-pointer showcase-image"
-                                    data-src="img/showcase/numeratech-3.png" data-alt="Numeratech - Screen 3">
-                                    <img src="img/showcase/numeratech-3.png" alt="Numeratech - Screen 3"
-                                        class="w-full h-64 sm:h-80 lg:h-96 object-cover transition-transform duration-300 group-hover:scale-105">
-                                    <div
-                                        class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    </div>
-                                    <div
-                                        class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                        <div class="bg-white/20 backdrop-blur-sm rounded-full p-3">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg" class="text-white">
-                                                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="currentColor"
-                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
-
-                    <!-- Progress indicator -->
-                    <div class="flex justify-center items-center mt-6 space-x-2">
-                        <div class="flex space-x-2" id="progressDots">
-                            <!-- Dots will be generated by JavaScript -->
+                    <!-- Project Info -->
+                    <div class="lg:w-2/5 p-6 lg:p-8 flex flex-col justify-center">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="white"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl lg:text-3xl font-bold text-white">Bani Street</h3>
+                                <p class="text-amber-300 text-sm font-medium">De la rue à la vie</p>
+                            </div>
                         </div>
-                        <div class="ml-4 text-white/70 text-sm font-medium" id="progressText">
-                            1 / 12
+                        <p class="text-white/80 mb-6 leading-relaxed">
+                            Plateforme de gestion de dons pour l'ONG Bani Street, avec gestion des dons ponctuels et récurrents,
+                            intégration multi-passerelles de paiement et système de campagnes multiples.
+                        </p>
+                        <!-- Features -->
+                        <div class="grid grid-cols-2 gap-2 mb-6 text-sm">
+                            <div class="flex items-center gap-2 text-white/70">
+                                <span class="text-amber-400">&#9679;</span> Dons ponctuels & récurrents
+                            </div>
+                            <div class="flex items-center gap-2 text-white/70">
+                                <span class="text-amber-400">&#9679;</span> Stripe & PayPal
+                            </div>
+                            <div class="flex items-center gap-2 text-white/70">
+                                <span class="text-amber-400">&#9679;</span> Espace donateur
+                            </div>
+                            <div class="flex items-center gap-2 text-white/70">
+                                <span class="text-amber-400">&#9679;</span> Reçus fiscaux auto
+                            </div>
+                        </div>
+                        <!-- Tech Stack -->
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-amber-500/20 text-amber-300 rounded-full text-xs font-medium">Symfony</span>
+                            <span class="px-3 py-1 bg-amber-500/20 text-amber-300 rounded-full text-xs font-medium">PHP</span>
+                            <span class="px-3 py-1 bg-amber-500/20 text-amber-300 rounded-full text-xs font-medium">MySQL</span>
+                            <span class="px-3 py-1 bg-amber-500/20 text-amber-300 rounded-full text-xs font-medium">Webpack</span>
+                            <span class="px-3 py-1 bg-amber-500/20 text-amber-300 rounded-full text-xs font-medium">Bootstrap</span>
                         </div>
                     </div>
                 </div>
+            </article>
 
-                <!-- Next Button - External -->
-                <button id="nextBtn"
-                    class="hidden lg:flex absolute right-0 xl:-right-16 top-1/2 transform -translate-y-1/2 z-10 bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white rounded-full p-5 transition-all duration-300 hover:scale-110 shadow-2xl">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg>
-                </button>
-            </div>
+            <!-- Project 2: RisqLab -->
+            <article class="w-full bg-white/5 backdrop-blur-sm rounded-3xl overflow-hidden border border-white/10 hover:border-cyan-400/30 transition-all duration-500">
+                <div class="flex flex-col lg:flex-row-reverse">
+                    <!-- Project Images -->
+                    <div class="lg:w-3/5 relative">
+                        <div class="project-gallery" data-project="risqlab">
+                            <div class="relative overflow-hidden">
+                                <div class="gallery-track flex transition-transform duration-500 ease-out">
+                                    <div class="gallery-slide flex-shrink-0 w-full">
+                                        <div class="relative group cursor-pointer showcase-image" data-src="img/showcase/risqlab/home.png" data-alt="RisqLab - Dashboard principal">
+                                            <img src="img/showcase/risqlab/home.png" alt="RisqLab - Dashboard principal"
+                                                class="w-full aspect-video object-cover transition-transform duration-300 group-hover:scale-105">
+                                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+                                                <span class="text-white text-sm font-medium bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">Cliquer pour agrandir</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-slide flex-shrink-0 w-full">
+                                        <div class="relative group cursor-pointer showcase-image" data-src="img/showcase/risqlab/home-light.png" data-alt="RisqLab - Mode clair">
+                                            <img src="img/showcase/risqlab/home-light.png" alt="RisqLab - Mode clair"
+                                                class="w-full aspect-video object-cover transition-transform duration-300 group-hover:scale-105">
+                                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+                                                <span class="text-white text-sm font-medium bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">Cliquer pour agrandir</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-slide flex-shrink-0 w-full">
+                                        <div class="relative group cursor-pointer showcase-image" data-src="img/showcase/risqlab/index-risqlab.png" data-alt="RisqLab - Indice RisqLab 80">
+                                            <img src="img/showcase/risqlab/index-risqlab.png" alt="RisqLab - Indice RisqLab 80"
+                                                class="w-full aspect-video object-cover transition-transform duration-300 group-hover:scale-105">
+                                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+                                                <span class="text-white text-sm font-medium bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">Cliquer pour agrandir</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-slide flex-shrink-0 w-full">
+                                        <div class="relative group cursor-pointer showcase-image" data-src="img/showcase/risqlab/methodology-volatility.png" data-alt="RisqLab - Methodologie volatilite">
+                                            <img src="img/showcase/risqlab/methodology-volatility.png" alt="RisqLab - Methodologie volatilite"
+                                                class="w-full aspect-video object-cover transition-transform duration-300 group-hover:scale-105">
+                                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+                                                <span class="text-white text-sm font-medium bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">Cliquer pour agrandir</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-slide flex-shrink-0 w-full">
+                                        <div class="relative group cursor-pointer showcase-image" data-src="img/showcase/risqlab/portfolio-risk.png" data-alt="RisqLab - Analyse de portefeuille">
+                                            <img src="img/showcase/risqlab/portfolio-risk.png" alt="RisqLab - Analyse de portefeuille"
+                                                class="w-full aspect-video object-cover transition-transform duration-300 group-hover:scale-105">
+                                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+                                                <span class="text-white text-sm font-medium bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">Cliquer pour agrandir</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Gallery Navigation -->
+                                <button class="gallery-prev absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-3 transition-all duration-300 hover:scale-110 z-10">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                                <button class="gallery-next absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-3 transition-all duration-300 hover:scale-110 z-10">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                                <!-- Gallery Dots -->
+                                <div class="gallery-dots absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+                                    <button class="w-2 h-2 rounded-full bg-white transition-all duration-300"></button>
+                                    <button class="w-2 h-2 rounded-full bg-white/40 hover:bg-white/60 transition-all duration-300"></button>
+                                    <button class="w-2 h-2 rounded-full bg-white/40 hover:bg-white/60 transition-all duration-300"></button>
+                                    <button class="w-2 h-2 rounded-full bg-white/40 hover:bg-white/60 transition-all duration-300"></button>
+                                    <button class="w-2 h-2 rounded-full bg-white/40 hover:bg-white/60 transition-all duration-300"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Info -->
+                    <div class="lg:w-2/5 p-6 lg:p-8 flex flex-col justify-center">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3 3v18h18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M18 9l-5 5-4-4-3 3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl lg:text-3xl font-bold text-white">RisqLab</h3>
+                                <p class="text-cyan-300 text-sm font-medium">Maîtriser le risque crypto</p>
+                            </div>
+                        </div>
+                        <p class="text-white/80 mb-6 leading-relaxed">
+                            Plateforme d'analyse de risque pour le marché des cryptomonnaies avec suivi en temps réel,
+                            calculs de volatilité et indice propriétaire RisqLab 80 pondéré par capitalisation.
+                        </p>
+                        <!-- Features -->
+                        <div class="grid grid-cols-2 gap-2 mb-6 text-sm">
+                            <div class="flex items-center gap-2 text-white/70">
+                                <span class="text-cyan-400">&#9679;</span> 80 cryptos suivies
+                            </div>
+                            <div class="flex items-center gap-2 text-white/70">
+                                <span class="text-cyan-400">&#9679;</span> Volatilité temps réel
+                            </div>
+                            <div class="flex items-center gap-2 text-white/70">
+                                <span class="text-cyan-400">&#9679;</span> Corrélation Pearson
+                            </div>
+                            <div class="flex items-center gap-2 text-white/70">
+                                <span class="text-cyan-400">&#9679;</span> Fear & Greed Index
+                            </div>
+                        </div>
+                        <!-- Tech Stack -->
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded-full text-xs font-medium">Next.js 15</span>
+                            <span class="px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded-full text-xs font-medium">React 18</span>
+                            <span class="px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded-full text-xs font-medium">Node.js</span>
+                            <span class="px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded-full text-xs font-medium">TypeScript</span>
+                            <span class="px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded-full text-xs font-medium">MySQL</span>
+                            <span class="px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded-full text-xs font-medium">Binance API</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 3: ShopTracker -->
+            <article class="w-full bg-white/5 backdrop-blur-sm rounded-3xl overflow-hidden border border-white/10 hover:border-purple-400/30 transition-all duration-500">
+                <div class="flex flex-col lg:flex-row">
+                    <!-- Project Images -->
+                    <div class="lg:w-3/5 relative">
+                        <div class="project-gallery" data-project="shoptracker">
+                            <div class="relative overflow-hidden">
+                                <div class="gallery-track flex transition-transform duration-500 ease-out">
+                                    <div class="gallery-slide flex-shrink-0 w-full">
+                                        <div class="relative group cursor-pointer showcase-image" data-src="img/showcase/shoptracker/landing.png" data-alt="ShopTracker - Landing page">
+                                            <img src="img/showcase/shoptracker/landing.png" alt="ShopTracker - Landing page"
+                                                class="w-full aspect-video object-cover transition-transform duration-300 group-hover:scale-105">
+                                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+                                                <span class="text-white text-sm font-medium bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">Cliquer pour agrandir</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-slide flex-shrink-0 w-full">
+                                        <div class="relative group cursor-pointer showcase-image" data-src="img/showcase/shoptracker/how-to.png" data-alt="ShopTracker - Guide d'utilisation">
+                                            <img src="img/showcase/shoptracker/how-to.png" alt="ShopTracker - Guide d'utilisation"
+                                                class="w-full aspect-video object-cover transition-transform duration-300 group-hover:scale-105">
+                                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+                                                <span class="text-white text-sm font-medium bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">Cliquer pour agrandir</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-slide flex-shrink-0 w-full">
+                                        <div class="relative group cursor-pointer showcase-image" data-src="img/showcase/shoptracker/boosts.png" data-alt="ShopTracker - Systeme de boosts">
+                                            <img src="img/showcase/shoptracker/boosts.png" alt="ShopTracker - Systeme de boosts"
+                                                class="w-full aspect-video object-cover transition-transform duration-300 group-hover:scale-105">
+                                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+                                                <span class="text-white text-sm font-medium bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">Cliquer pour agrandir</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-slide flex-shrink-0 w-full">
+                                        <div class="relative group cursor-pointer showcase-image" data-src="img/showcase/shoptracker/pricing.png" data-alt="ShopTracker - Tarification">
+                                            <img src="img/showcase/shoptracker/pricing.png" alt="ShopTracker - Tarification"
+                                                class="w-full aspect-video object-cover transition-transform duration-300 group-hover:scale-105">
+                                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+                                                <span class="text-white text-sm font-medium bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">Cliquer pour agrandir</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Gallery Navigation -->
+                                <button class="gallery-prev absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-3 transition-all duration-300 hover:scale-110 z-10">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                                <button class="gallery-next absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-3 transition-all duration-300 hover:scale-110 z-10">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                                <!-- Gallery Dots -->
+                                <div class="gallery-dots absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+                                    <button class="w-2 h-2 rounded-full bg-white transition-all duration-300"></button>
+                                    <button class="w-2 h-2 rounded-full bg-white/40 hover:bg-white/60 transition-all duration-300"></button>
+                                    <button class="w-2 h-2 rounded-full bg-white/40 hover:bg-white/60 transition-all duration-300"></button>
+                                    <button class="w-2 h-2 rounded-full bg-white/40 hover:bg-white/60 transition-all duration-300"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Info -->
+                    <div class="lg:w-2/5 p-6 lg:p-8 flex flex-col justify-center">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-400 to-pink-500 flex items-center justify-center">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 20a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM20 20a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" fill="white"/>
+                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl lg:text-3xl font-bold text-white">ShopTracker</h3>
+                                <p class="text-purple-300 text-sm font-medium">Suivi de prix & restocks</p>
+                            </div>
+                        </div>
+                        <p class="text-white/80 mb-6 leading-relaxed">
+                            Plateforme SaaS de suivi automatique des prix et de la disponibilité de produits
+                            sur toutes les boutiques en ligne, avec notifications temps réel.
+                        </p>
+                        <!-- Features -->
+                        <div class="grid grid-cols-2 gap-2 mb-6 text-sm">
+                            <div class="flex items-center gap-2 text-white/70">
+                                <span class="text-purple-400">&#9679;</span> Tracker automatique
+                            </div>
+                            <div class="flex items-center gap-2 text-white/70">
+                                <span class="text-purple-400">&#9679;</span> Notifications push
+                            </div>
+                            <div class="flex items-center gap-2 text-white/70">
+                                <span class="text-purple-400">&#9679;</span> Paiements Stripe
+                            </div>
+                            <div class="flex items-center gap-2 text-white/70">
+                                <span class="text-purple-400">&#9679;</span> API REST complète
+                            </div>
+                        </div>
+                        <!-- Tech Stack -->
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-xs font-medium">Next.js 14</span>
+                            <span class="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-xs font-medium">React 18</span>
+                            <span class="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-xs font-medium">Node.js</span>
+                            <span class="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-xs font-medium">Express</span>
+                            <span class="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-xs font-medium">MySQL</span>
+                            <span class="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-xs font-medium">Stripe</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
 
         </div>
         <a href="#about" class="rotate-180 fixed bottom-16 lg:bottom-8 right-8 z-40 size-14">
