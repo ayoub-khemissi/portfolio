@@ -3,7 +3,12 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Lexend', sans-serif;
 }
 
@@ -17,6 +22,7 @@ html {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -37,7 +43,7 @@ html {
   h1 {
     font-size: 2.5rem !important;
   }
-  
+
   h2 {
     font-size: 1.8rem !important;
   }
@@ -47,7 +53,7 @@ html {
   h1 {
     font-size: 2rem !important;
   }
-  
+
   h2 {
     font-size: 1.5rem !important;
   }
@@ -75,37 +81,48 @@ html {
 }
 
 /* Navigation buttons with glassmorphism effect */
-#prevBtn, #nextBtn, #prevBtnMobile, #nextBtnMobile {
+#prevBtn,
+#nextBtn,
+#prevBtnMobile,
+#nextBtnMobile {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-#prevBtn:hover, #nextBtn:hover, #prevBtnMobile:hover, #nextBtnMobile:hover {
+#prevBtn:hover,
+#nextBtn:hover,
+#prevBtnMobile:hover,
+#nextBtnMobile:hover {
   background-color: rgba(255, 255, 255, 0.3);
   border-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Specific style for desktop external buttons */
-#prevBtn, #nextBtn {
+#prevBtn,
+#nextBtn {
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
 
 /* Button animation on hover */
-#prevBtn:hover, #nextBtn:hover {
+#prevBtn:hover,
+#nextBtn:hover {
   transform: translateY(-50%) scale(1.15);
 }
 
-#prevBtnMobile:hover, #nextBtnMobile:hover {
+#prevBtnMobile:hover,
+#nextBtnMobile:hover {
   transform: scale(1.1);
 }
 
 /* Navigation button animations */
-#prevBtn, #nextBtn {
+#prevBtn,
+#nextBtn {
   transition: all 0.2s ease;
 }
 
-#prevBtn:disabled, #nextBtn:disabled {
+#prevBtn:disabled,
+#nextBtn:disabled {
   cursor: not-allowed;
 }
 
@@ -137,11 +154,12 @@ html {
 
 /* Horizontal scroll responsive design */
 @media (max-width: 1024px) {
+
   /* Adjust arrow position on tablet */
   #prevBtn {
     left: -2rem;
   }
-  
+
   #nextBtn {
     right: -2rem;
   }
@@ -149,14 +167,16 @@ html {
 
 /* Mobile carousel improvements */
 @media (max-width: 768px) {
+
   /* Reduce carousel track padding on mobile */
   #carouselTrack {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
-  
+
   /* Ensure mobile buttons are properly spaced */
-  #prevBtnMobile, #nextBtnMobile {
+  #prevBtnMobile,
+  #nextBtnMobile {
     min-width: 48px;
     min-height: 48px;
     display: flex;
@@ -166,6 +186,7 @@ html {
 }
 
 @media (max-width: 640px) {
+
   /* Further reduce spacing on small screens */
   #carouselTrack {
     gap: 0.75rem !important;
@@ -173,19 +194,22 @@ html {
 }
 
 @media (max-width: 480px) {
+
   /* Minimal spacing for very small screens */
   #carouselTrack {
     gap: 0.5rem !important;
     padding-left: 0.25rem;
     padding-right: 0.25rem;
   }
-  
+
   /* Smaller mobile buttons for very small screens */
-  #prevBtnMobile, #nextBtnMobile {
+  #prevBtnMobile,
+  #nextBtnMobile {
     padding: 0.625rem;
   }
-  
-  #prevBtnMobile svg, #nextBtnMobile svg {
+
+  #prevBtnMobile svg,
+  #nextBtnMobile svg {
     width: 20px;
     height: 20px;
   }
@@ -215,6 +239,7 @@ html {
     opacity: 0;
     transform: scale(0.9);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -247,12 +272,12 @@ html {
     max-width: 95vw;
     max-height: 80vh;
   }
-  
+
   #closeModal {
     top: -3rem;
     right: 0;
   }
-  
+
   #closeModal svg {
     width: 24px;
     height: 24px;
@@ -264,12 +289,12 @@ html {
     max-width: 98vw;
     max-height: 75vh;
   }
-  
+
   #closeModal {
     top: -2.5rem;
     padding: 0.375rem;
   }
-  
+
   #closeModal svg {
     width: 20px;
     height: 20px;
@@ -278,6 +303,7 @@ html {
 
 /* Accessibility - reduced motion */
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -285,16 +311,36 @@ html {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-  
+
   #carouselTrack {
     transition: none !important;
   }
-  
+
   .showcase-image img {
     transition: none !important;
   }
-  
+
   #modalImage {
     animation: none !important;
   }
+}
+
+/* FAQ Accordion Styles */
+.faq-item.active .faq-answer {
+  max-height: 500px !important;
+  /* Higher specificity to override Tailwind max-h-0 */
+  opacity: 1 !important;
+}
+
+.faq-item.active .faq-question svg {
+  transform: rotate(180deg);
+}
+
+.faq-item.active {
+  border-color: rgba(212, 175, 55, 0.6) !important;
+  background-color: rgba(26, 26, 26, 0.8) !important;
+}
+
+.faq-answer {
+  transition: all 0.5s ease-in-out;
 }
