@@ -1,6 +1,33 @@
 /* Essential styles not available in Tailwind */
 body {
   font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(180deg,
+    #0a0a0a 0%,
+    #0d0d0d 15%,
+    #0a0a0a 30%,
+    #0f0d0a 50%,
+    #0a0a0a 70%,
+    #0d0d0d 85%,
+    #0a0a0a 100%
+  );
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* Subtle gold ambient glow */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(ellipse 80% 50% at 20% 20%, rgba(212, 175, 55, 0.03) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 40% at 80% 80%, rgba(212, 175, 55, 0.02) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 30% at 50% 50%, rgba(139, 105, 20, 0.02) 0%, transparent 40%);
+  pointer-events: none;
+  z-index: 0;
 }
 
 h1,
@@ -9,6 +36,10 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: 'Lexend', sans-serif;
+}
+
+.font-lexend {
   font-family: 'Lexend', sans-serif;
 }
 
@@ -341,6 +372,28 @@ html {
   background-color: rgba(26, 26, 26, 0.8) !important;
 }
 
-.faq-answer {
-  transition: all 0.5s ease-in-out;
+/* Marquee Animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-container {
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.marquee-content {
+  display: flex;
+  width: max-content;
+  animation: marquee 50s linear infinite;
+}
+
+.marquee-content:hover {
+  animation-play-state: paused;
 }
