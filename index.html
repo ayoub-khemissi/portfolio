@@ -412,12 +412,12 @@
     <section id="expertise"
         class="flex flex-col justify-center items-center relative px-8 lg:px-16 min-h-screen overflow-hidden">
         <div
-            class="relative z-10 flex flex-col justify-center items-center space-y-6 py-8 lg:py-16 text-center h-full text-white">
+            class="relative z-10 flex flex-col justify-center items-center space-y-6 py-8 lg:py-16 text-center h-full text-white w-full max-w-7xl">
             <h2 class="py-1 uppercase text-4xl lg:text-6xl font-bold text-center bg-gradient-to-r from-[#d4af37] via-[#f4d03f] to-[#c9a227] bg-clip-text text-transparent drop-shadow-lg"
                 id="expertise-title">Solutions & Impact Business</h2>
-            <div class="flex justify-center w-full flex-wrap gap-8 px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
                 <div
-                    class="bg-[#1a1a1a] backdrop-blur-sm border border-[#d4af37]/30 shadow-lg hover:shadow-[#d4af37]/20 hover:border-[#d4af37]/60 transition-all duration-300 hover:-translate-y-2 flex flex-col justify-start items-center w-[350px] rounded-2xl p-8 my-6 space-y-6 text-gray-200">
+                    class="bg-[#1a1a1a] backdrop-blur-sm border border-[#d4af37]/30 shadow-lg hover:shadow-[#d4af37]/20 hover:border-[#d4af37]/60 transition-all duration-300 hover:-translate-y-2 flex flex-col justify-start items-center rounded-2xl p-8 space-y-6 text-gray-200">
                     <img src="img/misc/performance.svg" width="70" height="70"
                         alt="Icône représentant la vélocité et le Time-to-Market">
                     <h3 class="text-2xl font-bold text-[#d4af37]">Vélocité & Time-to-Market</h3>
@@ -427,7 +427,7 @@
                     </p>
                 </div>
                 <div
-                    class="bg-[#1a1a1a] backdrop-blur-sm border border-[#d4af37]/30 shadow-lg hover:shadow-[#d4af37]/20 hover:border-[#d4af37]/60 transition-all duration-300 hover:-translate-y-2 flex flex-col justify-start items-center w-[350px] rounded-2xl p-8 my-6 space-y-6 text-gray-200">
+                    class="bg-[#1a1a1a] backdrop-blur-sm border border-[#d4af37]/30 shadow-lg hover:shadow-[#d4af37]/20 hover:border-[#d4af37]/60 transition-all duration-300 hover:-translate-y-2 flex flex-col justify-start items-center rounded-2xl p-8 space-y-6 text-gray-200">
                     <img src="img/misc/expertise.svg" width="70" height="70"
                         alt="Icône représentant l'architecture et la sécurité">
                     <h3 class="text-2xl font-bold text-[#d4af37]">Architecture & Sécurité</h3>
@@ -437,7 +437,7 @@
                     </p>
                 </div>
                 <div
-                    class="bg-[#1a1a1a] backdrop-blur-sm border border-[#d4af37]/30 shadow-lg hover:shadow-[#d4af37]/20 hover:border-[#d4af37]/60 transition-all duration-300 hover:-translate-y-2 flex flex-col justify-start items-center w-[350px] rounded-2xl p-8 my-6 space-y-6 text-gray-200">
+                    class="bg-[#1a1a1a] backdrop-blur-sm border border-[#d4af37]/30 shadow-lg hover:shadow-[#d4af37]/20 hover:border-[#d4af37]/60 transition-all duration-300 hover:-translate-y-2 flex flex-col justify-start items-center rounded-2xl p-8 space-y-6 text-gray-200">
                     <img src="img/misc/optimizing.svg" width="70" height="70"
                         alt="Icône représentant la qualité et la maintenabilité">
                     <h3 class="text-2xl font-bold text-[#d4af37]">Qualité & Maintenabilité</h3>
@@ -700,8 +700,8 @@
 
     <!-- Section Testimonials -->
     <section id="testimonials"
-        class="min-h-screen flex flex-col justify-center items-center py-24 relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-8 relative z-10 flex flex-col items-center">
+        class="min-h-screen flex flex-col justify-center items-center px-8 lg:px-16 py-24 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto relative z-10 flex flex-col items-center w-full">
             <h2
                 class="py-1 uppercase text-4xl lg:text-6xl font-bold text-center bg-gradient-to-r from-[#d4af37] via-[#f4d03f] to-[#c9a227] bg-clip-text text-transparent drop-shadow-lg mb-16">
                 Ce qu'en disent mes partenaires</h2>
@@ -895,7 +895,7 @@
     </section>
 
     <section id="showcase"
-        class="flex flex-col justify-center items-center text-white px-4 lg:px-8 py-16 lg:py-24 relative overflow-hidden">
+        class="flex flex-col justify-center items-center text-white px-8 lg:px-16 py-16 lg:py-24 relative overflow-hidden">
         <div class="flex flex-col justify-center items-center space-y-16 w-full max-w-7xl relative z-10">
             <h2
                 class="py-1 uppercase text-4xl lg:text-6xl font-bold text-center bg-gradient-to-r from-[#d4af37] via-[#f4d03f] to-[#c9a227] bg-clip-text text-transparent drop-shadow-lg">
@@ -1671,8 +1671,9 @@
     </section>
 
     <!-- Section Contact & Calendly -->
-    <section id="contact" class="min-h-screen flex flex-col justify-center items-center py-24 relative overflow-hidden">
-        <div class="max-w-5xl mx-auto px-8 relative z-10 text-center">
+    <section id="contact"
+        class="min-h-screen flex flex-col justify-center items-center px-8 lg:px-16 py-24 relative overflow-hidden">
+        <div class="max-w-5xl mx-auto relative z-10 text-center w-full">
             <h2
                 class="py-1 uppercase text-4xl lg:text-6xl font-bold bg-gradient-to-r from-[#d4af37] via-[#f4d03f] to-[#c9a227] bg-clip-text text-transparent drop-shadow-lg mb-8">
                 Prêt à sécuriser votre lancement ?</h2>
