@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OG Image Card - Ayoub KHEMISSI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'montserrat': ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        'gold': '#d4af37',
+                        'gold-light': '#f4d03f',
+                        'gold-dark': '#c9a227',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .text-gradient {
+            background: linear-gradient(135deg, #d4af37, #f4d03f, #c9a227);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #d4af37, #f4d03f, #c9a227, #d4af37);
+        }
+        .gold-line-gradient {
+            background: linear-gradient(90deg, #d4af37, #f4d03f, #c9a227);
+        }
+    </style>
+</head>
+
+<body class="font-montserrat bg-[#0a0a0a] min-h-screen flex justify-center items-center p-5">
+
+    <!-- Card 1200x630 -->
+    <div class="w-[1200px] h-[630px] bg-gradient-to-br from-[#0a0a0a] via-[#1a1a1a] to-[#0f0f0f] relative overflow-hidden flex items-center px-20 py-16">
+
+        <!-- Gold top line -->
+        <div class="absolute top-0 left-0 right-0 h-1.5 gold-line-gradient"></div>
+
+        <!-- Decorative glow top-right -->
+        <div class="absolute -top-48 -right-48 w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(212,175,55,0.15)_0%,transparent_70%)] pointer-events-none"></div>
+
+        <!-- Decorative glow bottom-left -->
+        <div class="absolute -bottom-36 -left-36 w-96 h-96 bg-[radial-gradient(circle,rgba(212,175,55,0.08)_0%,transparent_70%)] pointer-events-none"></div>
+
+        <!-- Content -->
+        <div class="flex items-center gap-16 relative z-10 w-full">
+
+            <!-- Photo -->
+            <div class="flex-shrink-0">
+                <div class="w-72 h-72 rounded-full p-1.5 gold-gradient shadow-[0_0_60px_rgba(212,175,55,0.3)]">
+                    <img src="../img/socials/ayoub-khemissi.jpg" alt="Ayoub KHEMISSI"
+                         class="w-full h-full rounded-full object-cover border-4 border-[#0a0a0a]">
+                </div>
+            </div>
+
+            <!-- Text -->
+            <div class="flex-1">
+                <h1 class="text-5xl font-extrabold text-gradient mb-3 tracking-tight">Ayoub KHEMISSI</h1>
+                <p class="text-[28px] font-semibold text-white mb-6">Expert Full Stack React & Node.js</p>
+                <p class="text-[22px] text-gray-400 mb-9 leading-relaxed">
+                    Votre <span class="text-gold font-semibold">MVP en 4 semaines</span><br>
+                    Startups & Grands Comptes - Paris
+                </p>
+
+                <!-- Stats -->
+                <div class="flex gap-12">
+                    <div class="text-left">
+                        <div class="text-[42px] font-extrabold text-gradient leading-none">8+</div>
+                        <div class="text-sm text-gray-500 uppercase tracking-wide mt-1">Ans d'expertise</div>
+                    </div>
+                    <div class="text-left">
+                        <div class="text-[42px] font-extrabold text-gradient leading-none">30+</div>
+                        <div class="text-sm text-gray-500 uppercase tracking-wide mt-1">Projets livrés</div>
+                    </div>
+                    <div class="text-left">
+                        <div class="text-[42px] font-extrabold text-gradient leading-none">100%</div>
+                        <div class="text-sm text-gray-500 uppercase tracking-wide mt-1">Satisfaction</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Decorative dots bottom-left -->
+        <div class="absolute bottom-8 left-16 flex gap-2">
+            <div class="w-2 h-2 rounded-full bg-gold/30"></div>
+            <div class="w-2 h-2 rounded-full bg-gold/50"></div>
+            <div class="w-2 h-2 rounded-full bg-gold/70"></div>
+        </div>
+
+        <!-- Domain bottom-right -->
+        <div class="absolute bottom-10 right-16 flex items-center gap-2.5 text-gray-500 text-lg font-medium">
+            <span class="w-2.5 h-2.5 bg-gold rounded-full shadow-[0_0_10px_rgba(212,175,55,0.5)]"></span>
+            linkedin.com/in/ayoub-khemissi
+        </div>
+    </div>
+
+</body>
+
+</html>

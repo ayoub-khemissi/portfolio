@@ -4,76 +4,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Primary Meta Tags -->
+    <title>Expert React & Node.js Paris | MVP en 4 semaines - Ayoub KHEMISSI</title>
+    <meta name="title" content="Expert React & Node.js Paris | MVP en 4 semaines - Ayoub KHEMISSI">
     <meta name="description"
-        content="Développeur Full Stack avec plus de 8 ans d'expérience dans la création d'applications web et mobile innovantes. Expertise en JavaScript/TypeScript, React, React Native, Next.js, Node.js et les technologies modernes pour propulser vos projets vers l'excellence digitale.">
+        content="Développeur Full Stack senior spécialisé Startups & Grands Comptes. +30 projets critiques livrés (CNAM, ADEME, OFB). MVP prêt en 4 semaines. Diagnostic gratuit de 15 min.">
 
-    <meta name="keywords"
-        content="Développeur Full Stack, JavaScript, TypeScript, React, React Native, Next.js, Node.js, applications web modernes, applications mobiles, développement frontend, développement backend, innovation digitale, interface utilisateur, UX/UI, performance web, SEO, API REST, base de données, Docker, AWS, technologies modernes, Tours, Paris, freelance">
-
-    <meta name="author" content="Ayoub Khemissi">
-    <meta name="robots" content="index, follow">
+    <meta name="author" content="Ayoub KHEMISSI">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
     <meta name="theme-color" content="#0a0a0a">
+    <meta name="msapplication-TileColor" content="#d4af37">
     <link rel="canonical" href="https://ayoub-khemissi.github.io/portfolio">
 
-    <!-- Schema.org structured data -->
+    <!-- Geo Tags pour SEO Local Paris -->
+    <meta name="geo.region" content="FR-75">
+    <meta name="geo.placename" content="Paris">
+    <meta name="geo.position" content="48.8698;2.3079">
+    <meta name="ICBM" content="48.8698, 2.3079">
+
+    <!-- Language -->
+    <meta name="language" content="French">
+    <meta http-equiv="content-language" content="fr-FR">
+
+    <!-- Schema.org structured data - Person + ProfessionalService -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Ayoub KHEMISSI",
-        "jobTitle": "Développeur Full Stack",
-        "description": "Développeur Full Stack avec plus de 8 ans d'expérience dans la création d'applications web et mobile innovantes",
-        "url": "https://ayoub-khemissi.github.io/portfolio",
-        "email": "khemayoub@gmail.com",
-        "telephone": "+33659977340",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "60 rue François Ier",
-            "postalCode": "75008",
-            "addressLocality": "Paris",
-            "addressCountry": "FR"
-        },
-        "sameAs": [
-            "https://github.com/ayoub-khemissi",
-            "https://www.linkedin.com/in/ayoub-khemissi/",
-            "https://www.malt.fr/profile/ayoubkhemissi"
-        ],
-        "knowsAbout": [
-            "React",
-            "React Native",
-            "JavaScript",
-            "TypeScript",
-            "Next.js",
-            "Node.js",
-            "Développement web",
-            "Développement mobile"
-        ],
-        "hasOccupation": {
-            "@type": "Occupation",
-            "name": "Développeur Full Stack",
-            "occupationLocation": {
-                "@type": "City",
-                "name": "Paris"
+        "@graph": [
+            {
+                "@type": "Person",
+                "@id": "https://ayoub-khemissi.github.io/portfolio/#person",
+                "name": "Ayoub KHEMISSI",
+                "givenName": "Ayoub",
+                "familyName": "KHEMISSI",
+                "jobTitle": "Expert Full Stack React & Node.js",
+                "description": "Développeur Full Stack senior avec 8+ ans d'expérience. Spécialisé dans la création de MVP et applications critiques pour Startups et Grands Comptes.",
+                "url": "https://ayoub-khemissi.github.io/portfolio",
+                "image": "https://ayoub-khemissi.github.io/portfolio/img/socials/ayoub-khemissi.jpg",
+                "email": "khemayoub@gmail.com",
+                "telephone": "+33659977340",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "60 rue François Ier",
+                    "postalCode": "75008",
+                    "addressLocality": "Paris",
+                    "addressRegion": "Île-de-France",
+                    "addressCountry": "FR"
+                },
+                "sameAs": [
+                    "https://github.com/ayoub-khemissi",
+                    "https://www.linkedin.com/in/ayoub-khemissi/",
+                    "https://www.malt.fr/profile/ayoubkhemissi"
+                ],
+                "knowsAbout": ["React", "React Native", "Next.js", "Node.js", "TypeScript", "AWS", "Symfony", "PostgreSQL"],
+                "alumniOf": {
+                    "@type": "Organization",
+                    "name": "CNAM Paris"
+                }
+            },
+            {
+                "@type": "ProfessionalService",
+                "@id": "https://ayoub-khemissi.github.io/portfolio/#business",
+                "name": "Ayoub KHEMISSI - Expert Full Stack",
+                "image": "https://ayoub-khemissi.github.io/portfolio/img/socials/ayoub-khemissi.jpg",
+                "url": "https://ayoub-khemissi.github.io/portfolio",
+                "telephone": "+33659977340",
+                "email": "khemayoub@gmail.com",
+                "description": "Accompagnement technique senior pour Startups et Grands Comptes. Développement d'applications web et mobile critiques.",
+                "priceRange": "€€€",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "60 rue François Ier",
+                    "postalCode": "75008",
+                    "addressLocality": "Paris",
+                    "addressRegion": "Île-de-France",
+                    "addressCountry": "FR"
+                },
+                "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": 48.8698,
+                    "longitude": 2.3079
+                },
+                "areaServed": [
+                    {"@type": "City", "name": "Paris"},
+                    {"@type": "Country", "name": "France"}
+                ],
+                "hasOfferCatalog": {
+                    "@type": "OfferCatalog",
+                    "name": "Services de développement",
+                    "itemListElement": [
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Pack Lancement Go-to-Market",
+                                "description": "MVP complet livré en 4 semaines, prêt pour vos premiers clients payants"
+                            },
+                            "priceSpecification": {
+                                "@type": "PriceSpecification",
+                                "price": "2500-5000",
+                                "priceCurrency": "EUR"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Pack Scale-Up & Automation",
+                                "description": "Optimisation et automatisation pour applications en croissance"
+                            },
+                            "priceSpecification": {
+                                "@type": "PriceSpecification",
+                                "price": "5000-10000",
+                                "priceCurrency": "EUR"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Pack Consulting & Architecture",
+                                "description": "Conseil stratégique et architecture technique pour projets critiques"
+                            },
+                            "priceSpecification": {
+                                "@type": "PriceSpecification",
+                                "price": "8000-15000",
+                                "priceCurrency": "EUR"
+                            }
+                        }
+                    ]
+                },
+                "founder": {"@id": "https://ayoub-khemissi.github.io/portfolio/#person"},
+                "sameAs": [
+                    "https://github.com/ayoub-khemissi",
+                    "https://www.linkedin.com/in/ayoub-khemissi/",
+                    "https://www.malt.fr/profile/ayoubkhemissi"
+                ]
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://ayoub-khemissi.github.io/portfolio/#website",
+                "url": "https://ayoub-khemissi.github.io/portfolio",
+                "name": "Ayoub KHEMISSI - Expert Full Stack Paris",
+                "description": "Portfolio et services de développement Full Stack",
+                "publisher": {"@id": "https://ayoub-khemissi.github.io/portfolio/#person"},
+                "inLanguage": "fr-FR"
+            },
+            {
+                "@type": "FAQPage",
+                "@id": "https://ayoub-khemissi.github.io/portfolio/#faq",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Combien coûte un projet de développement web ?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Les tarifs varient de 2 500€ pour un MVP basique à 15 000€+ pour des projets d'architecture complexe. Un diagnostic gratuit de 15 minutes permet d'évaluer précisément vos besoins."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "En combien de temps mon MVP sera-t-il prêt ?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Un MVP fonctionnel peut être livré en 4 semaines grâce à une méthodologie éprouvée et une maîtrise complète de la stack moderne (Next.js, Supabase, AWS)."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Travaillez-vous avec les startups et les grands comptes ?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Oui, j'accompagne aussi bien les startups en phase de lancement que les grands comptes (CNAM, ADEME, OFB) sur leurs projets critiques nécessitant sécurité et scalabilité."
+                        }
+                    }
+                ]
             }
-        }
+        ]
     }
     </script>
 
-    <meta property="og:title" content="Ayoub Khemissi | Développeur Full Stack">
-    <meta property="og:description"
-        content="Développeur Full Stack avec plus de 8 ans d'expérience dans la création d'applications web et mobile innovantes. Spécialisé dans l'écosystème JavaScript/TypeScript, React, Node.js et les technologies modernes pour propulser vos projets digitaux.">
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ayoub-khemissi.github.io/portfolio">
+    <meta property="og:title" content="Expert React & Node.js Paris | MVP en 4 semaines - Ayoub KHEMISSI">
+    <meta property="og:description"
+        content="Développeur Full Stack senior pour Startups & Grands Comptes. +30 projets critiques livrés. MVP prêt en 4 semaines. Diagnostic gratuit 15 min.">
+    <meta property="og:image" content="https://ayoub-khemissi.github.io/portfolio/img/socials/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Ayoub KHEMISSI - Expert Full Stack React & Node.js à Paris">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="Ayoub KHEMISSI - Expert Full Stack">
 
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Ayoub Khemissi | Développeur Full Stack">
+    <meta name="twitter:url" content="https://ayoub-khemissi.github.io/portfolio">
+    <meta name="twitter:title" content="Expert React & Node.js Paris | MVP en 4 semaines">
     <meta name="twitter:description"
-        content="Développeur Full Stack avec plus de 8 ans d'expérience. Création d'applications web et mobile innovantes avec JavaScript/TypeScript, React, Node.js et les technologies modernes pour propulser vos projets digitaux.">
+        content="Développeur Full Stack senior pour Startups & Grands Comptes. +30 projets critiques livrés. Diagnostic gratuit.">
+    <meta name="twitter:image" content="https://ayoub-khemissi.github.io/portfolio/img/socials/og-image.jpg">
+    <meta name="twitter:image:alt" content="Ayoub KHEMISSI - Expert Full Stack React & Node.js à Paris">
+    <meta name="twitter:creator" content="@ayoub_khemissi">
 
-    <link rel="icon" href="img/socials/ayoub-khemissi.jpg" type="image/x-icon">
-    <title>Ayoub KHEMISSI - Développeur Full Stack | Paris</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="img/socials/ayoub-khemissi.jpg">
+    <link rel="apple-touch-icon" href="img/socials/ayoub-khemissi.jpg">
+
+    <!-- Preconnect pour performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://calendly.com">
+    <link rel="preconnect" href="https://assets.calendly.com">
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+
+    <!-- Preload ressources critiques -->
+    <link rel="preload" href="img/socials/ayoub-khemissi.jpg" as="image">
+
+    <!-- Scripts & Styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
@@ -146,35 +297,60 @@
                     <div
                         class="marquee-content flex items-center gap-12 lg:gap-24 transition-all duration-500 [&>img]:mix-blend-multiply">
                         <!-- Logos group 1 -->
-                        <img src="img/clients/cnam.svg" alt="CNAM" class="h-8 lg:h-10 w-auto">
-                        <img src="img/clients/ofb.svg" alt="OFB" class="h-8 lg:h-12 w-auto">
-                        <img src="img/clients/ademe.svg" alt="ADEME" class="h-8 lg:h-12 w-auto">
-                        <img src="img/clients/cipav.svg" alt="CIPAV" class="h-8 lg:h-12 w-auto">
-                        <img src="img/clients/bani-street.svg" alt="Bani Street" class="h-8 lg:h-12 w-auto">
-                        <img src="img/clients/risqlab.svg" alt="RisqLab" class="h-8 lg:h-12 w-auto">
-                        <img src="img/clients/numeratech.svg" alt="Numeratech" class="h-8 lg:h-12 w-auto">
-                        <img src="img/clients/majaliss.svg" alt="Majaliss" class="h-8 lg:h-12 w-auto">
-                        <img src="img/clients/nabawi.svg" alt="Nabawi" class="h-8 lg:h-12 w-auto">
-                        <img src="img/clients/mihrab.svg" alt="Mihrab" class="h-8 lg:h-12 w-auto">
-                        <img src="img/clients/vth.svg" alt="Val Touraine Habitat" class="h-8 lg:h-12 w-auto">
-                        <img src="img/clients/aurea.svg" alt="Auréa Agrosciences" class="h-8 lg:h-12 w-auto">
-                        <img src="img/clients/agrikaido.svg" alt="Agrikaïdo" class="h-8 lg:h-12 w-auto">
-                        <img src="img/clients/exaegis.svg" alt="Exægis" class="h-8 lg:h-12 w-auto">
-                        <!-- Logos group 2 (duplicate for loop) -->
-                        <img src="img/clients/cnam.svg" alt="CNAM" class="h-8 lg:h-10 w-auto">
-                        <img src="img/clients/ofb.svg" alt="OFB" class="h-8 lg:h-12 w-auto">
-                        <img src="img/clients/ademe.svg" alt="ADEME" class="h-8 lg:h-12 w-auto">
-                        <img src="img/clients/cipav.svg" alt="CIPAV" class="h-8 lg:h-12 w-auto">
-                        <img src="img/clients/bani-street.svg" alt="Bani Street" class="h-8 lg:h-12 w-auto">
-                        <img src="img/clients/risqlab.svg" alt="RisqLab" class="h-8 lg:h-12 w-auto">
-                        <img src="img/clients/numeratech.svg" alt="Numeratech" class="h-8 lg:h-12 w-auto">
-                        <img src="img/clients/majaliss.svg" alt="Majaliss" class="h-8 lg:h-12 w-auto">
-                        <img src="img/clients/nabawi.svg" alt="Nabawi" class="h-8 lg:h-12 w-auto">
-                        <img src="img/clients/mihrab.svg" alt="Mihrab" class="h-8 lg:h-12 w-auto">
-                        <img src="img/clients/vth.svg" alt="Val Touraine Habitat" class="h-8 lg:h-12 w-auto">
-                        <img src="img/clients/aurea.svg" alt="Auréa Agrosciences" class="h-8 lg:h-12 w-auto">
-                        <img src="img/clients/agrikaido.svg" alt="Agrikaïdo" class="h-8 lg:h-12 w-auto">
-                        <img src="img/clients/exaegis.svg" alt="Exægis" class="h-8 lg:h-12 w-auto">
+                        <img src="img/clients/cnam.svg" alt="Logo CNAM - Client développement web"
+                            class="h-8 lg:h-10 w-auto">
+                        <img src="img/clients/ofb.svg"
+                            alt="Logo Office Français de la Biodiversité - Client application métier"
+                            class="h-8 lg:h-12 w-auto">
+                        <img src="img/clients/ademe.svg" alt="Logo ADEME - Client projet digital environnement"
+                            class="h-8 lg:h-12 w-auto">
+                        <img src="img/clients/cipav.svg" alt="Logo CIPAV - Client plateforme sécurisée"
+                            class="h-8 lg:h-12 w-auto">
+                        <img src="img/clients/bani-street.svg" alt="Logo Bani Street - Client plateforme de dons"
+                            class="h-8 lg:h-12 w-auto">
+                        <img src="img/clients/risqlab.svg" alt="Logo RisqLab - Client application fintech"
+                            class="h-8 lg:h-12 w-auto">
+                        <img src="img/clients/numeratech.svg" alt="Logo Numeratech - Client solutions digitales"
+                            class="h-8 lg:h-12 w-auto">
+                        <img src="img/clients/majaliss.svg" alt="Logo Majaliss - Client application mobile"
+                            class="h-8 lg:h-12 w-auto">
+                        <img src="img/clients/nabawi.svg" alt="Logo Nabawi - Client e-commerce"
+                            class="h-8 lg:h-12 w-auto">
+                        <img src="img/clients/mihrab.svg" alt="Logo Mihrab - Client plateforme web"
+                            class="h-8 lg:h-12 w-auto">
+                        <img src="img/clients/vth.svg" alt="Logo Val Touraine Habitat - Client application immobilier"
+                            class="h-8 lg:h-12 w-auto">
+                        <img src="img/clients/aurea.svg" alt="Logo Auréa Agrosciences - Client dashboard analytique"
+                            class="h-8 lg:h-12 w-auto">
+                        <img src="img/clients/agrikaido.svg" alt="Logo Agrikaïdo - Client application agricole"
+                            class="h-8 lg:h-12 w-auto">
+                        <img src="img/clients/exaegis.svg" alt="Logo Exægis - Client certification digitale"
+                            class="h-8 lg:h-12 w-auto">
+                        <!-- Logos group 2 (duplicate for marquee loop) -->
+                        <img src="img/clients/cnam.svg" alt="Logo CNAM" class="h-8 lg:h-10 w-auto" aria-hidden="true">
+                        <img src="img/clients/ofb.svg" alt="Logo OFB" class="h-8 lg:h-12 w-auto" aria-hidden="true">
+                        <img src="img/clients/ademe.svg" alt="Logo ADEME" class="h-8 lg:h-12 w-auto" aria-hidden="true">
+                        <img src="img/clients/cipav.svg" alt="Logo CIPAV" class="h-8 lg:h-12 w-auto" aria-hidden="true">
+                        <img src="img/clients/bani-street.svg" alt="Logo Bani Street" class="h-8 lg:h-12 w-auto"
+                            aria-hidden="true">
+                        <img src="img/clients/risqlab.svg" alt="Logo RisqLab" class="h-8 lg:h-12 w-auto"
+                            aria-hidden="true">
+                        <img src="img/clients/numeratech.svg" alt="Logo Numeratech" class="h-8 lg:h-12 w-auto"
+                            aria-hidden="true">
+                        <img src="img/clients/majaliss.svg" alt="Logo Majaliss" class="h-8 lg:h-12 w-auto"
+                            aria-hidden="true">
+                        <img src="img/clients/nabawi.svg" alt="Logo Nabawi" class="h-8 lg:h-12 w-auto"
+                            aria-hidden="true">
+                        <img src="img/clients/mihrab.svg" alt="Logo Mihrab" class="h-8 lg:h-12 w-auto"
+                            aria-hidden="true">
+                        <img src="img/clients/vth.svg" alt="Logo Val Touraine Habitat" class="h-8 lg:h-12 w-auto"
+                            aria-hidden="true">
+                        <img src="img/clients/aurea.svg" alt="Logo Auréa Agrosciences" class="h-8 lg:h-12 w-auto"
+                            aria-hidden="true">
+                        <img src="img/clients/agrikaido.svg" alt="Logo Agrikaïdo" class="h-8 lg:h-12 w-auto"
+                            aria-hidden="true">
+                        <img src="img/clients/exaegis.svg" alt="Logo Exægis" class="h-8 lg:h-12 w-auto"
+                            aria-hidden="true">
                     </div>
                 </div>
             </div>
@@ -1462,7 +1638,8 @@
 
             <!-- Calendly Inline Widget -->
             <div class="calendly-inline-widget rounded-2xl overflow-hidden border border-[#d4af37]/20 shadow-2xl w-full h-[700px] lg:h-[680px]"
-                data-url="https://calendly.com/primecode-contact/parlez-moi-de-votre-projet?hide_landing_page_details=1&hide_gdpr_banner=1&background_color=1a1a1a&text_color=ffffff&primary_color=d4af37"></div>
+                data-url="https://calendly.com/primecode-contact/parlez-moi-de-votre-projet?hide_landing_page_details=1&hide_gdpr_banner=1&background_color=1a1a1a&text_color=ffffff&primary_color=d4af37">
+            </div>
             <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
         </div>
     </section>
