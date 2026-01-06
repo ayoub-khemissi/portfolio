@@ -5,13 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7M6LHDTJC6"></script>
+    <!-- Google Analytics - Chargé uniquement après consentement -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-7M6LHDTJC6');
+
+        function loadGoogleAnalytics() {
+            const script = document.createElement('script');
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-7M6LHDTJC6';
+            script.async = true;
+            document.head.appendChild(script);
+            gtag('js', new Date());
+            gtag('config', 'G-7M6LHDTJC6');
+        }
+
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            loadGoogleAnalytics();
+            hideCookieBanner();
+        }
+
+        function refuseCookies() {
+            localStorage.setItem('cookieConsent', 'refused');
+            hideCookieBanner();
+        }
+
+        function hideCookieBanner() {
+            const banner = document.getElementById('cookie-banner');
+            if (banner) banner.style.display = 'none';
+        }
+
+        function showCookieBanner() {
+            const banner = document.getElementById('cookie-banner');
+            if (banner) banner.style.display = 'flex';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const consent = localStorage.getItem('cookieConsent');
+            if (consent === 'accepted') {
+                loadGoogleAnalytics();
+            } else if (consent !== 'refused') {
+                showCookieBanner();
+            }
+        });
     </script>
 
     <!-- SEO Primary Meta Tags -->
@@ -1729,6 +1765,52 @@
         </div>
 
         <div id="modalOverlay" class="absolute inset-0 cursor-pointer"></div>
+    </div>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner" style="display: none;"
+        class="fixed bottom-0 left-0 right-0 z-[100] bg-[#0a0a0a] border-t border-[#d4af37]/30 p-4 lg:p-6 shadow-2xl">
+        <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-start lg:items-center gap-4 lg:gap-6">
+            <div class="flex-1">
+                <div class="flex items-center gap-2 mb-2">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-[#d4af37]">
+                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="8" cy="10" r="1.5" fill="currentColor"/>
+                        <circle cx="15" cy="9" r="1" fill="currentColor"/>
+                        <circle cx="10" cy="15" r="1" fill="currentColor"/>
+                        <circle cx="16" cy="14" r="1.5" fill="currentColor"/>
+                    </svg>
+                    <h3 class="text-white font-bold text-sm lg:text-base">Cookies & Confidentialité</h3>
+                </div>
+                <p class="text-gray-400 text-xs lg:text-sm leading-relaxed">
+                    Ce site utilise Google Analytics pour analyser le trafic et améliorer votre expérience.
+                    Des données de navigation (pages visitées, durée, localisation approximative) sont collectées de manière anonyme.
+                    <button onclick="document.getElementById('cookie-details').classList.toggle('hidden')"
+                        class="text-[#d4af37] hover:text-[#f4d03f] underline ml-1 transition-colors">
+                        En savoir plus
+                    </button>
+                </p>
+                <div id="cookie-details" class="hidden mt-3 p-3 bg-[#0a0a0a] rounded-lg text-xs text-gray-500 leading-relaxed">
+                    <p class="mb-2">En acceptant, vous autorisez la collecte de données via les <strong class="text-gray-400">signaux Google</strong> incluant :</p>
+                    <ul class="list-disc list-inside space-y-1 mb-2">
+                        <li>Données de navigation et comportement sur le site</li>
+                        <li>Informations sur l'appareil et la zone géographique</li>
+                        <li>Association avec votre compte Google (si connecté)</li>
+                    </ul>
+                    <p>Vous pouvez gérer vos données sur <a href="https://myactivity.google.com" target="_blank" rel="noopener" class="text-[#d4af37] hover:underline">Mon activité Google</a>.</p>
+                </div>
+            </div>
+            <div class="flex gap-3 w-full lg:w-auto">
+                <button onclick="refuseCookies()"
+                    class="flex-1 lg:flex-none px-5 py-2.5 text-sm font-medium text-gray-400 hover:text-white border border-gray-600 hover:border-gray-400 rounded-lg transition-all duration-300">
+                    Refuser
+                </button>
+                <button onclick="acceptCookies()"
+                    class="flex-1 lg:flex-none px-5 py-2.5 text-sm font-bold bg-gradient-to-r from-[#d4af37] to-[#c9a227] text-[#0a0a0a] rounded-lg hover:scale-105 transition-all duration-300 shadow-lg shadow-[#d4af37]/20">
+                    Accepter
+                </button>
+            </div>
+        </div>
     </div>
 
     <script src="js/main.js"></script>
