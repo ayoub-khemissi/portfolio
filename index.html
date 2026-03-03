@@ -264,12 +264,14 @@
     <link rel="preconnect" href="https://calendly.com">
     <link rel="preconnect" href="https://assets.calendly.com">
     <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
     <!-- Preload ressources critiques -->
     <link rel="preload" href="img/socials/ayoub-khemissi.jpg" as="image">
 
     <!-- Scripts & Styles -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/motion@11.18.2/dist/motion.js"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
@@ -277,10 +279,20 @@
 </head>
 
 <body>
+    <div id="cursor-glow" aria-hidden="true"></div>
     <section id="about" role="main" aria-label="Section à propos d'Ayoub KHEMISSI"
         class="flex flex-col justify-center items-center px-8 lg:px-16 min-h-screen relative overflow-hidden">
+        <!-- Floating gold particles -->
+        <div class="particles" aria-hidden="true">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
         <div
-            class="flex flex-col justify-center items-center space-y-8 py-8 lg:py-16 text-center h-full w-full relative z-10 animate-fadeIn">
+            class="flex flex-col justify-center items-center space-y-8 py-8 lg:py-16 text-center h-full w-full relative z-10">
             <!-- Breadcrumb for SEO -->
             <nav aria-label="Breadcrumb" class="sr-only">
                 <ol>
@@ -294,10 +306,10 @@
             </nav>
             <img src="img/socials/ayoub-khemissi.jpg" width="160" height="160"
                 alt="Photo de profil d'Ayoub KHEMISSI, développeur React et React Native"
-                class="rounded-full mb-6 border-4 border-[#d4af37] shadow-2xl shadow-[#d4af37]/20 transition-all duration-300 hover:scale-105 hover:shadow-[#d4af37]/40">
+                class="profile-glow rounded-full mb-6 border-4 border-[#d4af37] shadow-2xl shadow-[#d4af37]/20 transition-all duration-300 hover:scale-105 hover:shadow-[#d4af37]/40">
             <div class="mb-6">
                 <h1
-                    class="text-5xl lg:text-7xl font-bold tracking-tight mb-4 leading-tight bg-gradient-to-r from-[#d4af37] via-[#f4d03f] to-[#c9a227] bg-clip-text text-transparent">
+                    class="text-5xl lg:text-7xl font-bold tracking-tight mb-4 leading-tight gold-shimmer">
                     Je transforme
                     <span class="relative inline-block px-3 py-1">
                         <!-- Hand-drawn circle SVG -->
@@ -307,7 +319,7 @@
                             <path d="M10,40 Q50,10 100,15 T190,40 T100,70 T10,40" stroke="currentColor" stroke-width="3"
                                 stroke-linecap="round" stroke-linejoin="round" class="highlight-path" />
                         </svg>
-                        <span class="relative z-10 text-white drop-shadow-[0_0_15px_rgba(37,99,235,0.5)]">vos
+                        <span class="relative z-10 text-white drop-shadow-[0_0_15px_rgba(37,99,235,0.5)]" style="-webkit-text-fill-color: white">vos
                             idées</span>
                     </span>
                     complexes en <br>
@@ -334,7 +346,28 @@
                 </a>
             </div>
 
-            <!-- Social Proof Bar -->
+            <!-- Stats Counter Bar -->
+            <div class="flex flex-wrap justify-center gap-8 lg:gap-16 mt-8 stats-bar">
+                <div class="text-center">
+                    <span class="text-3xl lg:text-4xl font-bold text-[#d4af37] counter" data-target="30">0</span><span class="text-3xl lg:text-4xl font-bold text-[#d4af37]">+</span>
+                    <p class="text-gray-500 text-xs mt-1 uppercase tracking-wider">Projets livrés</p>
+                </div>
+                <div class="text-center">
+                    <span class="text-3xl lg:text-4xl font-bold text-[#d4af37] counter" data-target="8">0</span>
+                    <p class="text-gray-500 text-xs mt-1 uppercase tracking-wider">Ans d'expertise</p>
+                </div>
+                <div class="text-center">
+                    <span class="text-3xl lg:text-4xl font-bold text-white counter" data-target="100">0</span><span class="text-3xl lg:text-4xl font-bold text-white">%</span>
+                    <p class="text-gray-500 text-xs mt-1 uppercase tracking-wider">Clients satisfaits</p>
+                </div>
+            </div>
+
+            <!-- Mockup 3 Devices -->
+            <div class="mt-8 w-full max-w-4xl">
+                <img src="img/mockup/mockup-3-devices.png" alt="Aperçu de mes réalisations sur laptop, mobile et tablette"
+                    class="mockup-glow w-full h-auto" width="900" height="600" loading="lazy">
+            </div>
+
             <!-- Social Proof Bar (Marquee) -->
             <div class="mt-16 w-full max-w-6xl overflow-hidden">
                 <p class="text-gray-500 uppercase tracking-widest text-[10px] font-bold mb-10">ILS ME FONT CONFIANCE</p>
@@ -351,7 +384,7 @@
                             class="h-8 lg:h-12 w-auto">
                         <img src="img/clients/cipav.svg" alt="Logo CIPAV - Client plateforme sécurisée"
                             class="h-8 lg:h-12 w-auto">
-                        <img src="img/clients/bani-street.svg" alt="Logo Bani Street - Client plateforme de dons"
+                        <img src="img/clients/bani-street.svg" alt="Logo Bani Academy - Client plateforme de dons"
                             class="h-8 lg:h-12 w-auto">
                         <img src="img/clients/risqlab.svg" alt="Logo CoinRisqLab - Client application fintech"
                             class="h-8 lg:h-12 w-auto">
@@ -376,7 +409,7 @@
                         <img src="img/clients/ofb.svg" alt="Logo OFB" class="h-8 lg:h-12 w-auto" aria-hidden="true">
                         <img src="img/clients/ademe.svg" alt="Logo ADEME" class="h-8 lg:h-12 w-auto" aria-hidden="true">
                         <img src="img/clients/cipav.svg" alt="Logo CIPAV" class="h-8 lg:h-12 w-auto" aria-hidden="true">
-                        <img src="img/clients/bani-street.svg" alt="Logo Bani Street" class="h-8 lg:h-12 w-auto"
+                        <img src="img/clients/bani-street.svg" alt="Logo Bani Academy" class="h-8 lg:h-12 w-auto"
                             aria-hidden="true">
                         <img src="img/clients/risqlab.svg" alt="Logo CoinRisqLab" class="h-8 lg:h-12 w-auto"
                             aria-hidden="true">
@@ -413,11 +446,11 @@
         class="flex flex-col justify-center items-center relative px-8 lg:px-16 min-h-screen overflow-hidden">
         <div
             class="relative z-10 flex flex-col justify-center items-center space-y-6 py-8 lg:py-16 text-center h-full text-white w-full max-w-7xl">
-            <h2 class="py-1 uppercase text-4xl lg:text-6xl font-bold text-center bg-gradient-to-r from-[#d4af37] via-[#f4d03f] to-[#c9a227] bg-clip-text text-transparent drop-shadow-lg"
+            <h2 class="py-1 uppercase text-4xl lg:text-6xl font-bold text-center gold-shimmer drop-shadow-lg"
                 id="expertise-title">Solutions & Impact Business</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
                 <div
-                    class="bg-[#1a1a1a] backdrop-blur-sm border border-[#d4af37]/30 shadow-lg hover:shadow-[#d4af37]/20 hover:border-[#d4af37]/60 transition-all duration-300 hover:-translate-y-2 flex flex-col justify-start items-center rounded-2xl p-8 space-y-6 text-gray-200">
+                    class="card-gold-glow bg-[#1a1a1a] backdrop-blur-sm border border-[#d4af37]/30 shadow-lg transition-all duration-300 hover:-translate-y-2 flex flex-col justify-start items-center rounded-2xl p-8 space-y-6 text-gray-200">
                     <img src="img/misc/performance.svg" width="70" height="70"
                         alt="Icône représentant la vélocité et le Time-to-Market">
                     <h3 class="text-2xl font-bold text-[#d4af37]">Vélocité & Time-to-Market</h3>
@@ -427,7 +460,7 @@
                     </p>
                 </div>
                 <div
-                    class="bg-[#1a1a1a] backdrop-blur-sm border border-[#d4af37]/30 shadow-lg hover:shadow-[#d4af37]/20 hover:border-[#d4af37]/60 transition-all duration-300 hover:-translate-y-2 flex flex-col justify-start items-center rounded-2xl p-8 space-y-6 text-gray-200">
+                    class="card-gold-glow bg-[#1a1a1a] backdrop-blur-sm border border-[#d4af37]/30 shadow-lg transition-all duration-300 hover:-translate-y-2 flex flex-col justify-start items-center rounded-2xl p-8 space-y-6 text-gray-200">
                     <img src="img/misc/expertise.svg" width="70" height="70"
                         alt="Icône représentant l'architecture et la sécurité">
                     <h3 class="text-2xl font-bold text-[#d4af37]">Architecture & Sécurité</h3>
@@ -437,7 +470,7 @@
                     </p>
                 </div>
                 <div
-                    class="bg-[#1a1a1a] backdrop-blur-sm border border-[#d4af37]/30 shadow-lg hover:shadow-[#d4af37]/20 hover:border-[#d4af37]/60 transition-all duration-300 hover:-translate-y-2 flex flex-col justify-start items-center rounded-2xl p-8 space-y-6 text-gray-200">
+                    class="card-gold-glow bg-[#1a1a1a] backdrop-blur-sm border border-[#d4af37]/30 shadow-lg transition-all duration-300 hover:-translate-y-2 flex flex-col justify-start items-center rounded-2xl p-8 space-y-6 text-gray-200">
                     <img src="img/misc/optimizing.svg" width="70" height="70"
                         alt="Icône représentant la qualité et la maintenabilité">
                     <h3 class="text-2xl font-bold text-[#d4af37]">Qualité & Maintenabilité</h3>
@@ -459,13 +492,13 @@
         class="flex flex-col justify-center items-center relative px-8 lg:px-16 min-h-screen py-16 lg:py-24 overflow-hidden">
 
         <div class="relative z-10 flex flex-col items-center w-full max-w-7xl">
-            <h2 class="py-1 uppercase text-4xl lg:text-6xl font-bold text-center bg-gradient-to-r from-[#d4af37] via-[#f4d03f] to-[#c9a227] bg-clip-text text-transparent drop-shadow-lg mb-16"
+            <h2 class="py-1 uppercase text-4xl lg:text-6xl font-bold text-center gold-shimmer drop-shadow-lg mb-16"
                 id="services-title">Mes Prestations</h2>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
                 <!-- Pack 1 -->
                 <div
-                    class="bg-[#1a1a1a] border border-[#d4af37]/20 rounded-3xl p-8 flex flex-col hover:border-[#d4af37]/50 transition-all duration-300 group hover:shadow-2xl hover:shadow-[#d4af37]/5">
+                    class="card-gold-glow bg-[#1a1a1a] border border-[#d4af37]/20 rounded-3xl p-8 flex flex-col transition-all duration-300 group">
                     <div class="flex justify-between items-start mb-6">
                         <span
                             class="text-[#d4af37] font-bold text-5xl opacity-20 group-hover:opacity-100 transition-opacity">01</span>
@@ -536,7 +569,7 @@
 
                 <!-- Pack 2 -->
                 <div
-                    class="bg-[#1a1a1a] border-2 border-[#d4af37] rounded-3xl p-8 flex flex-col hover:shadow-2xl hover:shadow-[#d4af37]/10 relative transition-all duration-300 group">
+                    class="bg-[#1a1a1a] animated-border rounded-3xl p-8 flex flex-col hover:shadow-2xl hover:shadow-[#d4af37]/10 relative transition-all duration-300 group">
                     <div
                         class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#d4af37] to-[#c9a227] text-[#0a0a0a] px-4 py-1 rounded-full text-xs text-center text-nowrap font-bold uppercase tracking-wider">
                         Plus Populaire</div>
@@ -610,7 +643,7 @@
 
                 <!-- Pack 3 -->
                 <div
-                    class="bg-[#1a1a1a] border border-[#d4af37]/20 rounded-3xl p-8 flex flex-col hover:border-[#d4af37]/50 transition-all duration-300 group hover:shadow-2xl hover:shadow-[#d4af37]/5">
+                    class="card-gold-glow bg-[#1a1a1a] border border-[#d4af37]/20 rounded-3xl p-8 flex flex-col transition-all duration-300 group">
                     <div class="flex justify-between items-start mb-6">
                         <span
                             class="text-[#d4af37] font-bold text-5xl opacity-20 group-hover:opacity-100 transition-opacity">03</span>
@@ -703,12 +736,12 @@
         class="min-h-screen flex flex-col justify-center items-center px-8 lg:px-16 py-24 relative overflow-hidden">
         <div class="max-w-7xl mx-auto relative z-10 flex flex-col items-center w-full">
             <h2
-                class="py-1 uppercase text-4xl lg:text-6xl font-bold text-center bg-gradient-to-r from-[#d4af37] via-[#f4d03f] to-[#c9a227] bg-clip-text text-transparent drop-shadow-lg mb-16">
+                class="py-1 uppercase text-4xl lg:text-6xl font-bold text-center gold-shimmer drop-shadow-lg mb-16">
                 Ce qu'en disent mes partenaires</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Testimonial 1 - G. Manon -->
                 <div
-                    class="bg-[#1a1a1a] p-8 rounded-3xl border border-[#d4af37]/10 hover:border-[#d4af37]/30 transition-all duration-300 flex flex-col">
+                    class="card-gold-glow bg-[#1a1a1a] p-8 rounded-3xl border border-[#d4af37]/10 transition-all duration-300 flex flex-col">
                     <div class="flex items-center gap-4 mb-6">
                         <img src="img/testimonials/g-manon.jpg" alt="G. Manon"
                             class="w-12 h-12 rounded-full object-cover border-2 border-[#d4af37]/30">
@@ -725,13 +758,13 @@
                 </div>
                 <!-- Testimonial 2 - V. Phung -->
                 <div
-                    class="bg-[#1a1a1a] p-8 rounded-3xl border border-[#d4af37]/10 hover:border-[#d4af37]/30 transition-all duration-300 flex flex-col">
+                    class="card-gold-glow bg-[#1a1a1a] p-8 rounded-3xl border border-[#d4af37]/10 transition-all duration-300 flex flex-col">
                     <div class="flex items-center gap-4 mb-6">
                         <img src="img/testimonials/v-phung.jpg" alt="V. Phung"
                             class="w-12 h-12 rounded-full object-cover border-2 border-[#d4af37]/30">
                         <div>
                             <h4 class="text-white font-bold">V. Phung</h4>
-                            <p class="text-[#d4af37] text-xs uppercase">Co-fondateur, Bani Street</p>
+                            <p class="text-[#d4af37] text-xs uppercase">Co-fondateur, Bani Academy</p>
                         </div>
                     </div>
                     <p class="text-gray-400 italic font-lexend mb-4">"Notre projet de V2 était à l'arrêt depuis presque
@@ -739,9 +772,9 @@
                         mois et nous avions besoin d'un développeur expérimenté en urgence. Ayoub a su répondre
                         rapidement et livrer une solution complète et fonctionnelle en itérant très régulièrement."</p>
                     <div class="flex gap-3 pt-4 border-t border-[#d4af37]/10 mt-auto">
-                        <a href="https://banistreet.com/" target="_blank" rel="noopener"
+                        <a href="https://baniacademy.org/" target="_blank" rel="noopener"
                             class="flex items-center gap-1 text-xs text-[#d4af37] hover:text-[#f4d03f] transition-colors">
-                            Bani Street
+                            Bani Academy
                             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
@@ -753,7 +786,7 @@
                 </div>
                 <!-- Testimonial 3 - D. Mbaye -->
                 <div
-                    class="bg-[#1a1a1a] p-8 rounded-3xl border border-[#d4af37]/10 hover:border-[#d4af37]/30 transition-all duration-300 flex flex-col">
+                    class="card-gold-glow bg-[#1a1a1a] p-8 rounded-3xl border border-[#d4af37]/10 transition-all duration-300 flex flex-col">
                     <div class="flex items-center gap-4 mb-6">
                         <img src="img/testimonials/d-mbaye.jpg" alt="D. Mbaye"
                             class="w-12 h-12 rounded-full object-cover border-2 border-[#d4af37]/30">
@@ -781,7 +814,7 @@
                 </div>
                 <!-- Testimonial 4 - Y. Ahmed -->
                 <div
-                    class="bg-[#1a1a1a] p-8 rounded-3xl border border-[#d4af37]/10 hover:border-[#d4af37]/30 transition-all duration-300 flex flex-col">
+                    class="card-gold-glow bg-[#1a1a1a] p-8 rounded-3xl border border-[#d4af37]/10 transition-all duration-300 flex flex-col">
                     <div class="flex items-center gap-4 mb-6">
                         <div
                             class="w-12 h-12 rounded-full bg-[#d4af37]/10 flex items-center justify-center border border-[#d4af37]/20 flex-shrink-0">
@@ -821,7 +854,7 @@
                 </div>
                 <!-- Testimonial 5 - M. Ayour -->
                 <div
-                    class="bg-[#1a1a1a] p-8 rounded-3xl border border-[#d4af37]/10 hover:border-[#d4af37]/30 transition-all duration-300 flex flex-col">
+                    class="card-gold-glow bg-[#1a1a1a] p-8 rounded-3xl border border-[#d4af37]/10 transition-all duration-300 flex flex-col">
                     <div class="flex items-center gap-4 mb-6">
                         <div
                             class="w-12 h-12 rounded-full bg-[#d4af37]/10 flex items-center justify-center border border-[#d4af37]/20 flex-shrink-0">
@@ -869,7 +902,7 @@
                 </div>
                 <!-- Testimonial 6 - R. Ayoub -->
                 <div
-                    class="bg-[#1a1a1a] p-8 rounded-3xl border border-[#d4af37]/10 hover:border-[#d4af37]/30 transition-all duration-300 flex flex-col">
+                    class="card-gold-glow bg-[#1a1a1a] p-8 rounded-3xl border border-[#d4af37]/10 transition-all duration-300 flex flex-col">
                     <div class="flex items-center gap-4 mb-6">
                         <img src="img/testimonials/r-ayoub.jpg" alt="R. Ayoub"
                             class="w-12 h-12 rounded-full object-cover border-2 border-[#d4af37]/30">
@@ -898,24 +931,26 @@
         class="flex flex-col justify-center items-center text-white px-8 lg:px-16 py-16 lg:py-24 relative overflow-hidden">
         <div class="flex flex-col justify-center items-center space-y-16 w-full max-w-7xl relative z-10">
             <h2
-                class="py-1 uppercase text-4xl lg:text-6xl font-bold text-center bg-gradient-to-r from-[#d4af37] via-[#f4d03f] to-[#c9a227] bg-clip-text text-transparent drop-shadow-lg">
+                class="py-1 uppercase text-4xl lg:text-6xl font-bold text-center gold-shimmer drop-shadow-lg">
                 Mes derniers projets</h2>
 
-            <!-- Project 1: Bani Street -->
+            <!-- ==========================================
+                 PROJECT 1: TSUKY TALES (violet)
+                 ========================================== -->
             <article
-                class="w-full bg-[#1a1a1a]/80 backdrop-blur-sm rounded-3xl overflow-hidden border border-[#10b981]/20 hover:border-[#10b981]/50 transition-all duration-500">
+                class="w-full bg-[#1a1a1a]/80 backdrop-blur-sm rounded-3xl overflow-hidden border border-[#7c3aed]/20 hover:border-[#7c3aed]/50 transition-all duration-500">
                 <div class="flex flex-col lg:flex-row">
                     <!-- Project Images -->
                     <div class="lg:w-3/5 relative lg:self-stretch">
-                        <div class="project-gallery h-full" data-project="bani-street">
+                        <div class="project-gallery h-full" data-project="tsukytales">
                             <div class="relative h-full overflow-hidden">
                                 <div class="gallery-track flex h-full transition-transform duration-500 ease-out">
                                     <div class="gallery-slide flex-shrink-0 w-full h-full">
                                         <div class="relative group h-full cursor-pointer showcase-image"
-                                            data-src="img/showcase/bani-street/home.png"
-                                            data-alt="Bani Street - Page d'accueil">
-                                            <img src="img/showcase/bani-street/home.png"
-                                                alt="Bani Street - Page d'accueil"
+                                            data-src="img/showcase/tsukytales/homepage.png"
+                                            data-alt="TsukyTales - Page d'accueil">
+                                            <img src="img/showcase/tsukytales/homepage.png"
+                                                alt="TsukyTales - Page d'accueil"
                                                 class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
                                             <div
                                                 class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
@@ -927,10 +962,10 @@
                                     </div>
                                     <div class="gallery-slide flex-shrink-0 w-full h-full">
                                         <div class="relative group h-full cursor-pointer showcase-image"
-                                            data-src="img/showcase/bani-street/orphelins.png"
-                                            data-alt="Bani Street - Campagne orphelins">
-                                            <img src="img/showcase/bani-street/orphelins.png"
-                                                alt="Bani Street - Campagne orphelins"
+                                            data-src="img/showcase/tsukytales/instagram-feed.png"
+                                            data-alt="TsukyTales - Feed Instagram">
+                                            <img src="img/showcase/tsukytales/instagram-feed.png"
+                                                alt="TsukyTales - Feed Instagram"
                                                 class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
                                             <div
                                                 class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
@@ -942,10 +977,10 @@
                                     </div>
                                     <div class="gallery-slide flex-shrink-0 w-full h-full">
                                         <div class="relative group h-full cursor-pointer showcase-image"
-                                            data-src="img/showcase/bani-street/ensemble.png"
-                                            data-alt="Bani Street - Vue d'ensemble">
-                                            <img src="img/showcase/bani-street/ensemble.png"
-                                                alt="Bani Street - Vue d'ensemble"
+                                            data-src="img/showcase/tsukytales/dark-theme.png"
+                                            data-alt="TsukyTales - Thème sombre">
+                                            <img src="img/showcase/tsukytales/dark-theme.png"
+                                                alt="TsukyTales - Thème sombre"
                                                 class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
                                             <div
                                                 class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
@@ -988,18 +1023,17 @@
                     <div class="lg:w-2/5 p-6 lg:p-8 flex flex-col justify-center">
                         <div class="flex items-center gap-3 mb-4">
                             <div
-                                class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#10b981] to-[#059669] flex items-center justify-center">
+                                class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#7c3aed] to-[#6d28d9] flex items-center justify-center">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
-                                        fill="white" />
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </div>
                             <div>
-                                <a href="https://banistreet.com/" target="_blank" rel="noopener"
+                                <a href="https://tsukytales.com/" target="_blank" rel="noopener"
                                     class="flex items-center gap-2 hover:opacity-80 transition-opacity">
-                                    <h3 class="text-2xl lg:text-3xl font-bold text-white">Bani Street</h3>
+                                    <h3 class="text-2xl lg:text-3xl font-bold text-white">TsukyTales</h3>
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg" class="text-white">
                                         <path
@@ -1008,85 +1042,542 @@
                                             stroke-linejoin="round" />
                                     </svg>
                                 </a>
-                                <p class="text-[#34d399] text-sm font-medium">De la rue à la vie</p>
+                                <p class="text-[#a78bfa] text-sm font-medium">Éditions collector & box littéraires</p>
                             </div>
                         </div>
                         <div class="space-y-4 mb-6">
                             <div>
-                                <h4 class="text-[#10b981] font-bold text-xs uppercase tracking-wider mb-1">Le
+                                <h4 class="text-[#7c3aed] font-bold text-xs uppercase tracking-wider mb-1">Le
                                     Défi</h4>
-                                <p class="text-gray-400 text-sm">Migration critique d'un WordPress obsolète vers
-                                    une
-                                    application Symfony 8. Reprise en urgence d'un projet v2 inachevé face à la
-                                    concurrence croissante des grandes ONG.</p>
+                                <p class="text-gray-400 text-sm">Créer de zéro une plateforme e-commerce de livres
+                                    illustrés et box trimestrielles, avec gestion d'abonnements complexes et
+                                    logistique internationale en 5 langues — sans aucun CMS.</p>
                             </div>
                             <div>
-                                <h4 class="text-[#10b981] font-bold text-xs uppercase tracking-wider mb-1">La
+                                <h4 class="text-[#7c3aed] font-bold text-xs uppercase tracking-wider mb-1">La
                                     Solution
                                 </h4>
-                                <p class="text-gray-400 text-sm">Remise à niveau technique totale : monitoring
-                                    avancé
-                                    (logs), migration d'API Stripe, intégration PayPal, sécurisation de
-                                    l'architecture
-                                    et migration complexe des données v1 vers v2.</p>
+                                <p class="text-gray-400 text-sm">Architecture Next.js 15 en couches (Services/Repos)
+                                    avec accès MySQL direct. Moteur d'abonnement Stripe SubscriptionSchedules,
+                                    checkout custom PaymentIntents, logistique Boxtal intégrée et back-office en
+                                    13 sections.</p>
                             </div>
                             <div>
-                                <h4 class="text-[#34d399] font-bold text-xs uppercase tracking-wider mb-1">Le
+                                <h4 class="text-[#a78bfa] font-bold text-xs uppercase tracking-wider mb-1">Le
                                     Résultat
                                 </h4>
-                                <p class="text-white font-semibold text-sm">Interface UI/UX optimisée,
-                                    automatisation
-                                    des reçus fiscaux, suivi des impayés et création d'un tableau de bord métier
-                                    pour la
-                                    gestion des donateurs.</p>
+                                <p class="text-white font-semibold text-sm">Revenus récurrents sécurisés via
+                                    abonnements flexibles, expansion européenne immédiate grâce au multilingue et
+                                    automatisation complète des flux de commande.</p>
                             </div>
                         </div>
                         <!-- Features -->
                         <div class="grid grid-cols-2 gap-2 mb-6 text-sm">
                             <div class="flex items-center gap-2 text-gray-400">
-                                <span class="text-[#10b981]">&#9679;</span> Migration WP vers Symfony
+                                <span class="text-[#7c3aed]">&#9679;</span> Abonnements Stripe
                             </div>
                             <div class="flex items-center gap-2 text-gray-400">
-                                <span class="text-[#10b981]">&#9679;</span> Stripe & PayPal (New API)
+                                <span class="text-[#7c3aed]">&#9679;</span> Checkout custom
                             </div>
                             <div class="flex items-center gap-2 text-gray-400">
-                                <span class="text-[#10b981]">&#9679;</span> Suivi des impayés
+                                <span class="text-[#7c3aed]">&#9679;</span> Multi-transporteur
                             </div>
                             <div class="flex items-center gap-2 text-gray-400">
-                                <span class="text-[#10b981]">&#9679;</span> Reçus fiscaux auto
+                                <span class="text-[#7c3aed]">&#9679;</span> Back-office 13 sections
                             </div>
                             <div class="flex items-center gap-2 text-gray-400">
-                                <span class="text-[#10b981]">&#9679;</span> Dashboard métier
+                                <span class="text-[#7c3aed]">&#9679;</span> 5 langues (i18n)
                             </div>
                             <div class="flex items-center gap-2 text-gray-400">
-                                <span class="text-[#10b981]">&#9679;</span> Monitoring & Logs
+                                <span class="text-[#7c3aed]">&#9679;</span> Pré-commandes & stocks
                             </div>
                         </div>
                         <!-- Tech Stack -->
                         <div class="flex flex-wrap gap-2">
                             <span
-                                class="px-3 py-1 bg-[#10b981]/20 text-[#10b981] rounded-full text-xs font-medium">Symfony</span>
-                            <span class="px-3 py-1 bg-[#10b981]/20 text-[#10b981] rounded-full text-xs font-medium">PHP
+                                class="px-3 py-1 bg-[#7c3aed]/20 text-[#7c3aed] rounded-full text-xs font-medium">Next.js
+                                15</span>
+                            <span
+                                class="px-3 py-1 bg-[#7c3aed]/20 text-[#7c3aed] rounded-full text-xs font-medium">TypeScript</span>
+                            <span
+                                class="px-3 py-1 bg-[#7c3aed]/20 text-[#7c3aed] rounded-full text-xs font-medium">MySQL
                                 8</span>
                             <span
-                                class="px-3 py-1 bg-[#10b981]/20 text-[#10b981] rounded-full text-xs font-medium">MySQL</span>
+                                class="px-3 py-1 bg-[#7c3aed]/20 text-[#7c3aed] rounded-full text-xs font-medium">Redis</span>
                             <span
-                                class="px-3 py-1 bg-[#10b981]/20 text-[#10b981] rounded-full text-xs font-medium">Doctrine
-                                ORM</span>
+                                class="px-3 py-1 bg-[#7c3aed]/20 text-[#7c3aed] rounded-full text-xs font-medium">Stripe</span>
                             <span
-                                class="px-3 py-1 bg-[#10b981]/20 text-[#10b981] rounded-full text-xs font-medium">Webpack
-                                Encore</span>
+                                class="px-3 py-1 bg-[#7c3aed]/20 text-[#7c3aed] rounded-full text-xs font-medium">Boxtal</span>
                             <span
-                                class="px-3 py-1 bg-[#10b981]/20 text-[#10b981] rounded-full text-xs font-medium">Bootstrap
-                                5</span>
+                                class="px-3 py-1 bg-[#7c3aed]/20 text-[#7c3aed] rounded-full text-xs font-medium">NextAuth
+                                v5</span>
+                            <span
+                                class="px-3 py-1 bg-[#7c3aed]/20 text-[#7c3aed] rounded-full text-xs font-medium">Tailwind
+                                v4</span>
+                            <span
+                                class="px-3 py-1 bg-[#7c3aed]/20 text-[#7c3aed] rounded-full text-xs font-medium">Framer
+                                Motion</span>
+                            <span
+                                class="px-3 py-1 bg-[#7c3aed]/20 text-[#7c3aed] rounded-full text-xs font-medium">PM2</span>
                         </div>
                     </div>
                 </div>
             </article>
 
-            <!-- Project 2: CoinRisqLab -->
+            <!-- ==========================================
+                 PROJECT 2: LORDAERON (sky blue)
+                 ========================================== -->
             <article
-                class="w-full bg-[#1a1a1a]/80 backdrop-blur-sm rounded-3xl overflow-hidden border border-[#722f37]/30 hover:border-[#722f37]/60 transition-all duration-500">
+                class="w-full bg-[#1a1a1a]/80 backdrop-blur-sm rounded-3xl overflow-hidden border border-[#38bdf8]/20 hover:border-[#38bdf8]/50 transition-all duration-500">
+                <div class="flex flex-col lg:flex-row-reverse">
+                    <!-- Project Images -->
+                    <div class="lg:w-3/5 relative lg:self-stretch">
+                        <div class="project-gallery h-full" data-project="lordaeron">
+                            <div class="relative h-full overflow-hidden">
+                                <div class="gallery-track flex h-full transition-transform duration-500 ease-out">
+                                    <div class="gallery-slide flex-shrink-0 w-full h-full">
+                                        <div class="relative group h-full cursor-pointer showcase-image"
+                                            data-src="img/showcase/lordaeron/home.png"
+                                            data-alt="Lordaeron - Page d'accueil">
+                                            <img src="img/showcase/lordaeron/home.png"
+                                                alt="Lordaeron - Page d'accueil"
+                                                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                                            <div
+                                                class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+                                                <span
+                                                    class="text-white text-sm font-medium bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">Cliquer
+                                                    pour agrandir</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-slide flex-shrink-0 w-full h-full">
+                                        <div class="relative group h-full cursor-pointer showcase-image"
+                                            data-src="img/showcase/lordaeron/how-to-play.png"
+                                            data-alt="Lordaeron - Comment jouer">
+                                            <img src="img/showcase/lordaeron/how-to-play.png"
+                                                alt="Lordaeron - Comment jouer"
+                                                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                                            <div
+                                                class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+                                                <span
+                                                    class="text-white text-sm font-medium bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">Cliquer
+                                                    pour agrandir</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-slide flex-shrink-0 w-full h-full">
+                                        <div class="relative group h-full cursor-pointer showcase-image"
+                                            data-src="img/showcase/lordaeron/features.png"
+                                            data-alt="Lordaeron - Fonctionnalités">
+                                            <img src="img/showcase/lordaeron/features.png"
+                                                alt="Lordaeron - Fonctionnalités"
+                                                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                                            <div
+                                                class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+                                                <span
+                                                    class="text-white text-sm font-medium bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">Cliquer
+                                                    pour agrandir</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-slide flex-shrink-0 w-full h-full">
+                                        <div class="relative group h-full cursor-pointer showcase-image"
+                                            data-src="img/showcase/lordaeron/progress-1.png"
+                                            data-alt="Lordaeron - Progression (1)">
+                                            <img src="img/showcase/lordaeron/progress-1.png"
+                                                alt="Lordaeron - Progression (1)"
+                                                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                                            <div
+                                                class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+                                                <span
+                                                    class="text-white text-sm font-medium bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">Cliquer
+                                                    pour agrandir</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-slide flex-shrink-0 w-full h-full">
+                                        <div class="relative group h-full cursor-pointer showcase-image"
+                                            data-src="img/showcase/lordaeron/progress-2.png"
+                                            data-alt="Lordaeron - Progression (2)">
+                                            <img src="img/showcase/lordaeron/progress-2.png"
+                                                alt="Lordaeron - Progression (2)"
+                                                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                                            <div
+                                                class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+                                                <span
+                                                    class="text-white text-sm font-medium bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">Cliquer
+                                                    pour agrandir</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-slide flex-shrink-0 w-full h-full">
+                                        <div class="relative group h-full cursor-pointer showcase-image"
+                                            data-src="img/showcase/lordaeron/progress-3.png"
+                                            data-alt="Lordaeron - Progression (3)">
+                                            <img src="img/showcase/lordaeron/progress-3.png"
+                                                alt="Lordaeron - Progression (3)"
+                                                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                                            <div
+                                                class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+                                                <span
+                                                    class="text-white text-sm font-medium bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">Cliquer
+                                                    pour agrandir</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Gallery Navigation -->
+                                <button
+                                    class="gallery-prev absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-3 transition-all duration-300 hover:scale-110 z-10">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                                <button
+                                    class="gallery-next absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-3 transition-all duration-300 hover:scale-110 z-10">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                                <!-- Gallery Dots -->
+                                <div class="gallery-dots absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+                                    <button class="w-2 h-2 rounded-full bg-white transition-all duration-300"></button>
+                                    <button
+                                        class="w-2 h-2 rounded-full bg-white/40 hover:bg-white/60 transition-all duration-300"></button>
+                                    <button
+                                        class="w-2 h-2 rounded-full bg-white/40 hover:bg-white/60 transition-all duration-300"></button>
+                                    <button
+                                        class="w-2 h-2 rounded-full bg-white/40 hover:bg-white/60 transition-all duration-300"></button>
+                                    <button
+                                        class="w-2 h-2 rounded-full bg-white/40 hover:bg-white/60 transition-all duration-300"></button>
+                                    <button
+                                        class="w-2 h-2 rounded-full bg-white/40 hover:bg-white/60 transition-all duration-300"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Info -->
+                    <div class="lg:w-2/5 p-6 lg:p-8 flex flex-col justify-center">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#38bdf8] to-[#0284c7] flex items-center justify-center">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <a href="https://lordaeron.eu/" target="_blank" rel="noopener"
+                                    class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+                                    <h3 class="text-2xl lg:text-3xl font-bold text-white">Lordaeron</h3>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" class="text-white">
+                                        <path
+                                            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+                                <p class="text-[#7dd3fc] text-sm font-medium">Epic Progressive WoW 3.3.5a</p>
+                            </div>
+                        </div>
+                        <div class="space-y-4 mb-6">
+                            <div>
+                                <h4 class="text-[#38bdf8] font-bold text-xs uppercase tracking-wider mb-1">Le
+                                    Défi</h4>
+                                <p class="text-gray-400 text-sm">Concevoir l'écosystème web complet d'un serveur
+                                    privé WoW — marketplace in-game, économie virtuelle, livraison d'objets en
+                                    temps réel et back-office analytique — en 5 langues, sans solution clé en main.</p>
+                            </div>
+                            <div>
+                                <h4 class="text-[#38bdf8] font-bold text-xs uppercase tracking-wider mb-1">La
+                                    Solution
+                                </h4>
+                                <p class="text-gray-400 text-sm">Architecture Next.js 15 sur 4 bases MySQL distinctes
+                                    (auth/characters/world/website). Économie virtuelle Soul Shards avec Stripe,
+                                    livraison in-game SOAP TrinityCore, marketplace 8 catégories et auth SRP6
+                                    native.</p>
+                            </div>
+                            <div>
+                                <h4 class="text-[#7dd3fc] font-bold text-xs uppercase tracking-wider mb-1">Le
+                                    Résultat
+                                </h4>
+                                <p class="text-white font-semibold text-sm">Monétisation via économie virtuelle à
+                                    paliers progressifs (+40%), livraison instantanée in-game et expansion européenne
+                                    multilingue complète.</p>
+                            </div>
+                        </div>
+                        <!-- Features -->
+                        <div class="grid grid-cols-2 gap-2 mb-6 text-sm">
+                            <div class="flex items-center gap-2 text-gray-400">
+                                <span class="text-[#38bdf8]">&#9679;</span> Économie virtuelle (Soul Shards)
+                            </div>
+                            <div class="flex items-center gap-2 text-gray-400">
+                                <span class="text-[#38bdf8]">&#9679;</span> Livraison in-game SOAP
+                            </div>
+                            <div class="flex items-center gap-2 text-gray-400">
+                                <span class="text-[#38bdf8]">&#9679;</span> Marketplace 8 catégories
+                            </div>
+                            <div class="flex items-center gap-2 text-gray-400">
+                                <span class="text-[#38bdf8]">&#9679;</span> Auth SRP6 WoW-native
+                            </div>
+                            <div class="flex items-center gap-2 text-gray-400">
+                                <span class="text-[#38bdf8]">&#9679;</span> Back-office analytics
+                            </div>
+                            <div class="flex items-center gap-2 text-gray-400">
+                                <span class="text-[#38bdf8]">&#9679;</span> 5 langues (i18n)
+                            </div>
+                        </div>
+                        <!-- Tech Stack -->
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1 bg-[#38bdf8]/20 text-[#38bdf8] rounded-full text-xs font-medium">Next.js
+                                15</span>
+                            <span
+                                class="px-3 py-1 bg-[#38bdf8]/20 text-[#38bdf8] rounded-full text-xs font-medium">TypeScript</span>
+                            <span
+                                class="px-3 py-1 bg-[#38bdf8]/20 text-[#38bdf8] rounded-full text-xs font-medium">MySQL
+                                8</span>
+                            <span
+                                class="px-3 py-1 bg-[#38bdf8]/20 text-[#38bdf8] rounded-full text-xs font-medium">Stripe</span>
+                            <span
+                                class="px-3 py-1 bg-[#38bdf8]/20 text-[#38bdf8] rounded-full text-xs font-medium">TrinityCore
+                                SOAP</span>
+                            <span
+                                class="px-3 py-1 bg-[#38bdf8]/20 text-[#38bdf8] rounded-full text-xs font-medium">NextAuth</span>
+                            <span
+                                class="px-3 py-1 bg-[#38bdf8]/20 text-[#38bdf8] rounded-full text-xs font-medium">next-intl</span>
+                            <span
+                                class="px-3 py-1 bg-[#38bdf8]/20 text-[#38bdf8] rounded-full text-xs font-medium">Tailwind
+                                v4</span>
+                            <span
+                                class="px-3 py-1 bg-[#38bdf8]/20 text-[#38bdf8] rounded-full text-xs font-medium">HeroUI</span>
+                            <span
+                                class="px-3 py-1 bg-[#38bdf8]/20 text-[#38bdf8] rounded-full text-xs font-medium">Framer
+                                Motion</span>
+                            <span
+                                class="px-3 py-1 bg-[#38bdf8]/20 text-[#38bdf8] rounded-full text-xs font-medium">Recharts</span>
+                            <span
+                                class="px-3 py-1 bg-[#38bdf8]/20 text-[#38bdf8] rounded-full text-xs font-medium">PM2</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+
+            <!-- ==========================================
+                 PROJECT 3: SHOPTRACKER (gold)
+                 ========================================== -->
+            <article
+                class="w-full bg-[#1a1a1a]/80 backdrop-blur-sm rounded-3xl overflow-hidden border border-[#d4af37]/20 hover:border-[#d4af37]/50 transition-all duration-500">
+                <div class="flex flex-col lg:flex-row">
+                    <!-- Project Images -->
+                    <div class="lg:w-3/5 relative lg:self-stretch">
+                        <div class="project-gallery h-full" data-project="shoptracker">
+                            <div class="relative h-full overflow-hidden">
+                                <div class="gallery-track flex h-full transition-transform duration-500 ease-out">
+                                    <div class="gallery-slide flex-shrink-0 w-full h-full">
+                                        <div class="relative group h-full cursor-pointer showcase-image"
+                                            data-src="img/showcase/shoptracker/landing.png"
+                                            data-alt="ShopTracker - Landing page">
+                                            <img src="img/showcase/shoptracker/landing.png"
+                                                alt="ShopTracker - Landing page"
+                                                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                                            <div
+                                                class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+                                                <span
+                                                    class="text-white text-sm font-medium bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">Cliquer
+                                                    pour agrandir</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-slide flex-shrink-0 w-full h-full">
+                                        <div class="relative group h-full cursor-pointer showcase-image"
+                                            data-src="img/showcase/shoptracker/how-to.png"
+                                            data-alt="ShopTracker - Guide d'utilisation">
+                                            <img src="img/showcase/shoptracker/how-to.png"
+                                                alt="ShopTracker - Guide d'utilisation"
+                                                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                                            <div
+                                                class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+                                                <span
+                                                    class="text-white text-sm font-medium bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">Cliquer
+                                                    pour agrandir</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-slide flex-shrink-0 w-full h-full">
+                                        <div class="relative group h-full cursor-pointer showcase-image"
+                                            data-src="img/showcase/shoptracker/boosts.png"
+                                            data-alt="ShopTracker - Systeme de boosts">
+                                            <img src="img/showcase/shoptracker/boosts.png"
+                                                alt="ShopTracker - Systeme de boosts"
+                                                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                                            <div
+                                                class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+                                                <span
+                                                    class="text-white text-sm font-medium bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">Cliquer
+                                                    pour agrandir</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-slide flex-shrink-0 w-full h-full">
+                                        <div class="relative group h-full cursor-pointer showcase-image"
+                                            data-src="img/showcase/shoptracker/pricing.png"
+                                            data-alt="ShopTracker - Tarification">
+                                            <img src="img/showcase/shoptracker/pricing.png"
+                                                alt="ShopTracker - Tarification"
+                                                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                                            <div
+                                                class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+                                                <span
+                                                    class="text-white text-sm font-medium bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">Cliquer
+                                                    pour agrandir</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Gallery Navigation -->
+                                <button
+                                    class="gallery-prev absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-3 transition-all duration-300 hover:scale-110 z-10">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                                <button
+                                    class="gallery-next absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-3 transition-all duration-300 hover:scale-110 z-10">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                                <!-- Gallery Dots -->
+                                <div class="gallery-dots absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+                                    <button class="w-2 h-2 rounded-full bg-white transition-all duration-300"></button>
+                                    <button
+                                        class="w-2 h-2 rounded-full bg-white/40 hover:bg-white/60 transition-all duration-300"></button>
+                                    <button
+                                        class="w-2 h-2 rounded-full bg-white/40 hover:bg-white/60 transition-all duration-300"></button>
+                                    <button
+                                        class="w-2 h-2 rounded-full bg-white/40 hover:bg-white/60 transition-all duration-300"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Info -->
+                    <div class="lg:w-2/5 p-6 lg:p-8 flex flex-col justify-center">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#f4d03f] to-[#d4af37] flex items-center justify-center">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 20a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM20 20a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"
+                                        fill="#0a0a0a" />
+                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+                                        stroke="#0a0a0a" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div>
+                                <a href="https://www.shoptracker.eu/" target="_blank" rel="noopener"
+                                    class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+                                    <h3 class="text-2xl lg:text-3xl font-bold text-white">ShopTracker</h3>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" class="text-white">
+                                        <path
+                                            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+                                <p class="text-[#d4af37] text-sm font-medium">Suivi de prix & restocks</p>
+                            </div>
+                        </div>
+                        <div class="space-y-4 mb-6">
+                            <div>
+                                <h4 class="text-[#d4af37] font-bold text-xs uppercase tracking-wider mb-1">Le
+                                    Défi</h4>
+                                <p class="text-gray-400 text-sm">Les acheteurs particuliers étaient
+                                    systématiquement
+                                    devancés par des bots professionnels lors de restocks de produits limités.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 class="text-[#d4af37] font-bold text-xs uppercase tracking-wider mb-1">La
+                                    Solution
+                                </h4>
+                                <p class="text-gray-400 text-sm">Démocratisation de l'usage d'agents (bots)
+                                    intelligents
+                                    : un moteur de scraping ultra-rapide qui travaille pour l'utilisateur
+                                    24h/24.</p>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-1">Le
+                                    Résultat</h4>
+                                <p class="text-white font-semibold text-sm">Infrastructure scalable et
+                                    application
+                                    robuste, prête à absorber des milliers d'utilisateurs simultanés dès le
+                                    lancement.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Features -->
+                        <div class="grid grid-cols-2 gap-2 mb-6 text-sm">
+                            <div class="flex items-center gap-2 text-gray-400">
+                                <span class="text-[#d4af37]">&#9679;</span> Authentification NextAuth
+                            </div>
+                            <div class="flex items-center gap-2 text-gray-400">
+                                <span class="text-[#d4af37]">&#9679;</span> Notifications Push / SMS
+                            </div>
+                            <div class="flex items-center gap-2 text-gray-400">
+                                <span class="text-[#d4af37]">&#9679;</span> Paiements Stripe SaaS
+                            </div>
+                            <div class="flex items-center gap-2 text-gray-400">
+                                <span class="text-[#d4af37]">&#9679;</span> Stats & Graphiques
+                            </div>
+                            <div class="flex items-center gap-2 text-gray-400">
+                                <span class="text-[#d4af37]">&#9679;</span> API REST complète
+                            </div>
+                            <div class="flex items-center gap-2 text-gray-400">
+                                <span class="text-[#d4af37]">&#9679;</span> Scraping auto Node.js
+                            </div>
+                        </div>
+                        <!-- Tech Stack -->
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1 bg-[#d4af37]/20 text-[#d4af37] rounded-full text-xs font-medium">Next.js
+                                14</span>
+                            <span
+                                class="px-3 py-1 bg-[#d4af37]/20 text-[#d4af37] rounded-full text-xs font-medium">React
+                                18</span>
+                            <span
+                                class="px-3 py-1 bg-[#d4af37]/20 text-[#d4af37] rounded-full text-xs font-medium">Node.js
+                                / Express</span>
+                            <span
+                                class="px-3 py-1 bg-[#d4af37]/20 text-[#d4af37] rounded-full text-xs font-medium">Tailwind
+                                CSS</span>
+                            <span
+                                class="px-3 py-1 bg-[#d4af37]/20 text-[#d4af37] rounded-full text-xs font-medium">MySQL</span>
+                            <span
+                                class="px-3 py-1 bg-[#d4af37]/20 text-[#d4af37] rounded-full text-xs font-medium">Vercel
+                                Analytics</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ==========================================
+                 PROJECT 4: COINRISQLAB (dark red)
+                 ========================================== -->
+            <article
+                class="w-full bg-[#1a1a1a]/80 backdrop-blur-sm rounded-3xl overflow-hidden border border-[#722f37]/20 hover:border-[#722f37]/50 transition-all duration-500">
                 <div class="flex flex-col lg:flex-row-reverse">
                     <!-- Project Images -->
                     <div class="lg:w-3/5 relative lg:self-stretch">
@@ -1301,21 +1792,23 @@
                 </div>
             </article>
 
-            <!-- Project 3: ShopTracker -->
+            <!-- ==========================================
+                 PROJECT 5: BANI ACADEMY (green)
+                 ========================================== -->
             <article
-                class="w-full bg-[#1a1a1a]/80 backdrop-blur-sm rounded-3xl overflow-hidden border border-[#d4af37]/20 hover:border-[#d4af37]/50 transition-all duration-500">
+                class="w-full bg-[#1a1a1a]/80 backdrop-blur-sm rounded-3xl overflow-hidden border border-[#10b981]/20 hover:border-[#10b981]/50 transition-all duration-500">
                 <div class="flex flex-col lg:flex-row">
                     <!-- Project Images -->
                     <div class="lg:w-3/5 relative lg:self-stretch">
-                        <div class="project-gallery h-full" data-project="shoptracker">
+                        <div class="project-gallery h-full" data-project="bani-academy">
                             <div class="relative h-full overflow-hidden">
                                 <div class="gallery-track flex h-full transition-transform duration-500 ease-out">
                                     <div class="gallery-slide flex-shrink-0 w-full h-full">
                                         <div class="relative group h-full cursor-pointer showcase-image"
-                                            data-src="img/showcase/shoptracker/landing.png"
-                                            data-alt="ShopTracker - Landing page">
-                                            <img src="img/showcase/shoptracker/landing.png"
-                                                alt="ShopTracker - Landing page"
+                                            data-src="img/showcase/bani-street/home.png"
+                                            data-alt="Bani Academy - Page d'accueil">
+                                            <img src="img/showcase/bani-street/home.png"
+                                                alt="Bani Academy - Page d'accueil"
                                                 class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
                                             <div
                                                 class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
@@ -1327,10 +1820,10 @@
                                     </div>
                                     <div class="gallery-slide flex-shrink-0 w-full h-full">
                                         <div class="relative group h-full cursor-pointer showcase-image"
-                                            data-src="img/showcase/shoptracker/how-to.png"
-                                            data-alt="ShopTracker - Guide d'utilisation">
-                                            <img src="img/showcase/shoptracker/how-to.png"
-                                                alt="ShopTracker - Guide d'utilisation"
+                                            data-src="img/showcase/bani-street/ensemble.png"
+                                            data-alt="Bani Academy - Cours collectifs">
+                                            <img src="img/showcase/bani-street/ensemble.png"
+                                                alt="Bani Academy - Cours collectifs"
                                                 class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
                                             <div
                                                 class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
@@ -1342,25 +1835,10 @@
                                     </div>
                                     <div class="gallery-slide flex-shrink-0 w-full h-full">
                                         <div class="relative group h-full cursor-pointer showcase-image"
-                                            data-src="img/showcase/shoptracker/boosts.png"
-                                            data-alt="ShopTracker - Systeme de boosts">
-                                            <img src="img/showcase/shoptracker/boosts.png"
-                                                alt="ShopTracker - Systeme de boosts"
-                                                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
-                                            <div
-                                                class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
-                                                <span
-                                                    class="text-white text-sm font-medium bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">Cliquer
-                                                    pour agrandir</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="gallery-slide flex-shrink-0 w-full h-full">
-                                        <div class="relative group h-full cursor-pointer showcase-image"
-                                            data-src="img/showcase/shoptracker/pricing.png"
-                                            data-alt="ShopTracker - Tarification">
-                                            <img src="img/showcase/shoptracker/pricing.png"
-                                                alt="ShopTracker - Tarification"
+                                            data-src="img/showcase/bani-street/orphelins.png"
+                                            data-alt="Bani Academy - Programme solidaire">
+                                            <img src="img/showcase/bani-street/orphelins.png"
+                                                alt="Bani Academy - Programme solidaire"
                                                 class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
                                             <div
                                                 class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
@@ -1395,8 +1873,6 @@
                                         class="w-2 h-2 rounded-full bg-white/40 hover:bg-white/60 transition-all duration-300"></button>
                                     <button
                                         class="w-2 h-2 rounded-full bg-white/40 hover:bg-white/60 transition-all duration-300"></button>
-                                    <button
-                                        class="w-2 h-2 rounded-full bg-white/40 hover:bg-white/60 transition-all duration-300"></button>
                                 </div>
                             </div>
                         </div>
@@ -1405,20 +1881,17 @@
                     <div class="lg:w-2/5 p-6 lg:p-8 flex flex-col justify-center">
                         <div class="flex items-center gap-3 mb-4">
                             <div
-                                class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#f4d03f] to-[#d4af37] flex items-center justify-center">
+                                class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#34d399] to-[#10b981] flex items-center justify-center">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9 20a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM20 20a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"
-                                        fill="#0a0a0a" />
-                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
-                                        stroke="#0a0a0a" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" />
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                                        stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
                             </div>
                             <div>
-                                <a href="https://www.shoptracker.eu/" target="_blank" rel="noopener"
+                                <a href="https://baniacademy.org/" target="_blank" rel="noopener"
                                     class="flex items-center gap-2 hover:opacity-80 transition-opacity">
-                                    <h3 class="text-2xl lg:text-3xl font-bold text-white">ShopTracker</h3>
+                                    <h3 class="text-2xl lg:text-3xl font-bold text-white">Bani Academy</h3>
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg" class="text-white">
                                         <path
@@ -1427,77 +1900,73 @@
                                             stroke-linejoin="round" />
                                     </svg>
                                 </a>
-                                <p class="text-[#d4af37] text-sm font-medium">Suivi de prix & restocks</p>
+                                <p class="text-[#34d399] text-sm font-medium">Académie de danse urbaine & solidaire</p>
                             </div>
                         </div>
                         <div class="space-y-4 mb-6">
                             <div>
-                                <h4 class="text-[#d4af37] font-bold text-xs uppercase tracking-wider mb-1">Le
+                                <h4 class="text-[#10b981] font-bold text-xs uppercase tracking-wider mb-1">Le
                                     Défi</h4>
-                                <p class="text-gray-400 text-sm">Les acheteurs particuliers étaient
-                                    systématiquement
-                                    devancés par des bots professionnels lors de restocks de produits limités.
-                                </p>
+                                <p class="text-gray-400 text-sm">L'association n'avait aucune présence en ligne
+                                    et
+                                    gérait tout manuellement — inscriptions, horaires, communication —
+                                    freinant sa croissance.</p>
                             </div>
                             <div>
-                                <h4 class="text-[#d4af37] font-bold text-xs uppercase tracking-wider mb-1">La
+                                <h4 class="text-[#10b981] font-bold text-xs uppercase tracking-wider mb-1">La
                                     Solution
                                 </h4>
-                                <p class="text-gray-400 text-sm">Démocratisation de l'usage d'agents (bots)
-                                    intelligents
-                                    : un moteur de scraping ultra-rapide qui travaille pour l'utilisateur
-                                    24h/24.</p>
+                                <p class="text-gray-400 text-sm">Vitrine moderne responsive avec système
+                                    d'inscription
+                                    et réservation intégré, gestion des cours et horaires dynamiques, galerie
+                                    médias et
+                                    section blog.</p>
                             </div>
                             <div>
                                 <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-1">Le
                                     Résultat</h4>
-                                <p class="text-white font-semibold text-sm">Infrastructure scalable et
-                                    application
-                                    robuste, prête à absorber des milliers d'utilisateurs simultanés dès le
-                                    lancement.
-                                </p>
+                                <p class="text-white font-semibold text-sm">Visibilité décuplée — inscriptions
+                                    en
+                                    ligne multipliées par 3, gestion simplifiée, et image professionnelle
+                                    renforcée.</p>
                             </div>
                         </div>
                         <!-- Features -->
                         <div class="grid grid-cols-2 gap-2 mb-6 text-sm">
                             <div class="flex items-center gap-2 text-gray-400">
-                                <span class="text-[#d4af37]">&#9679;</span> Authentification NextAuth
+                                <span class="text-[#34d399]">&#9679;</span> Inscription en ligne
                             </div>
                             <div class="flex items-center gap-2 text-gray-400">
-                                <span class="text-[#d4af37]">&#9679;</span> Notifications Push / SMS
+                                <span class="text-[#34d399]">&#9679;</span> Planning dynamique
                             </div>
                             <div class="flex items-center gap-2 text-gray-400">
-                                <span class="text-[#d4af37]">&#9679;</span> Paiements Stripe SaaS
+                                <span class="text-[#34d399]">&#9679;</span> SEO optimisé
                             </div>
                             <div class="flex items-center gap-2 text-gray-400">
-                                <span class="text-[#d4af37]">&#9679;</span> Stats & Graphiques
+                                <span class="text-[#34d399]">&#9679;</span> Galerie médias
                             </div>
                             <div class="flex items-center gap-2 text-gray-400">
-                                <span class="text-[#d4af37]">&#9679;</span> API REST complète
+                                <span class="text-[#34d399]">&#9679;</span> Blog intégré
                             </div>
                             <div class="flex items-center gap-2 text-gray-400">
-                                <span class="text-[#d4af37]">&#9679;</span> Scraping auto Node.js
+                                <span class="text-[#34d399]">&#9679;</span> Responsive design
                             </div>
                         </div>
                         <!-- Tech Stack -->
                         <div class="flex flex-wrap gap-2">
                             <span
-                                class="px-3 py-1 bg-[#d4af37]/20 text-[#d4af37] rounded-full text-xs font-medium">Next.js
+                                class="px-3 py-1 bg-[#10b981]/20 text-[#34d399] rounded-full text-xs font-medium">Next.js
                                 14</span>
                             <span
-                                class="px-3 py-1 bg-[#d4af37]/20 text-[#d4af37] rounded-full text-xs font-medium">React
+                                class="px-3 py-1 bg-[#10b981]/20 text-[#34d399] rounded-full text-xs font-medium">React
                                 18</span>
                             <span
-                                class="px-3 py-1 bg-[#d4af37]/20 text-[#d4af37] rounded-full text-xs font-medium">Node.js
-                                / Express</span>
-                            <span
-                                class="px-3 py-1 bg-[#d4af37]/20 text-[#d4af37] rounded-full text-xs font-medium">Tailwind
+                                class="px-3 py-1 bg-[#10b981]/20 text-[#34d399] rounded-full text-xs font-medium">Tailwind
                                 CSS</span>
                             <span
-                                class="px-3 py-1 bg-[#d4af37]/20 text-[#d4af37] rounded-full text-xs font-medium">MySQL</span>
+                                class="px-3 py-1 bg-[#10b981]/20 text-[#34d399] rounded-full text-xs font-medium">Vercel</span>
                             <span
-                                class="px-3 py-1 bg-[#d4af37]/20 text-[#d4af37] rounded-full text-xs font-medium">Vercel
-                                Analytics</span>
+                                class="px-3 py-1 bg-[#10b981]/20 text-[#34d399] rounded-full text-xs font-medium">SEO</span>
                         </div>
                     </div>
                 </div>
@@ -1524,7 +1993,7 @@
         class="flex flex-col justify-center items-center text-white px-8 lg:px-16 min-h-screen py-16 lg:py-24 relative overflow-hidden">
         <div class="relative z-10 w-full max-w-4xl flex flex-col items-center">
             <h2
-                class="py-1 uppercase text-4xl lg:text-6xl font-bold text-center bg-gradient-to-r from-[#d4af37] via-[#f4d03f] to-[#c9a227] bg-clip-text text-transparent drop-shadow-lg mb-16">
+                class="py-1 uppercase text-4xl lg:text-6xl font-bold text-center gold-shimmer drop-shadow-lg mb-16">
                 Questions Fréquentes
             </h2>
 
@@ -1675,7 +2144,7 @@
         class="min-h-screen flex flex-col justify-center items-center px-8 lg:px-16 py-24 relative overflow-hidden">
         <div class="max-w-5xl mx-auto relative z-10 text-center w-full">
             <h2
-                class="py-1 uppercase text-4xl lg:text-6xl font-bold bg-gradient-to-r from-[#d4af37] via-[#f4d03f] to-[#c9a227] bg-clip-text text-transparent drop-shadow-lg mb-8">
+                class="py-1 uppercase text-4xl lg:text-6xl font-bold gold-shimmer drop-shadow-lg mb-8">
                 Prêt à sécuriser votre lancement ?</h2>
             <p class="text-gray-400 text-lg mb-12 max-w-2xl mx-auto font-lexend">
                 Je n'accepte qu'un projet par mois pour garantir une qualité maximale.
